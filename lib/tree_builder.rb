@@ -1,5 +1,5 @@
 require 'set'
-require_relative './parse_import_statement'
+require_relative './import_statement'
 
 class TreeResult < Struct.new(:tree)
   def to_h
@@ -30,32 +30,25 @@ class TreeBuilder < Struct.new(:entrypoint)
   private
 
   def _call
-    open_file(entrypoint).map do |line|
-        ParseImportStatement.call(line)
-    end
-      .select {|l| path? l }
+    read_file(entrypoint)
+      .map {|line| ImportStatement.new(line) }
+      .select(&:file_import?)
+      .map(&:location)
       .map do |path|
         PARSABLE_FILE_TYPES.map {|filetype| add_file_extension(to_absolute_path(path).gsub(Dir.pwd, ''), filetype) }
       end
-        .map {|paths| to_real_path paths }
-        .map {|path| TreeBuilder.call('.' + path) }
+      .map {|paths| to_real_path paths }
+      .map {|path| TreeBuilder.call('.' + path) }
   end
 
-  def open_file path
-    extname = File.extname(path)
-    if !PARSABLE_FILE_TYPES.include? extname
-      return []
-    end
+  def read_file path
+    return [] if !PARSABLE_FILE_TYPES.include? File.extname(path)
     File.open(path).each_line
   end
 
   def add_file_extension(path, extension)
     return path if !File.extname(path).empty?
     path + extension
-  end
-
-  def path? line
-    line.start_with?('.') || line.start_with?('/')
   end
 
   def to_absolute_path line
