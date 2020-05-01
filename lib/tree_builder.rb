@@ -1,3 +1,4 @@
+require 'set'
 require_relative './parse_import_statement'
 
 class TreeResult < Struct.new(:tree)
@@ -9,6 +10,8 @@ class TreeResult < Struct.new(:tree)
   end
 end
 
+PARSABLE_FILE_TYPES = Set['.jsx', '.js']
+
 class TreeBuilder < Struct.new(:entrypoint)
   def self.call entrypoint
     new(entrypoint).call
@@ -19,23 +22,31 @@ class TreeBuilder < Struct.new(:entrypoint)
       node: entrypoint,
       children: _call
     })
+  rescue Exception => e
+    puts "Traversed file: #{entrypoint}"
+    raise e
   end
 
   private
 
   def _call
-    File.open(entrypoint).each_line.map do |line|
-      ParseImportStatement.call(line)
+    open_file(entrypoint).map do |line|
+        ParseImportStatement.call(line)
     end
       .select {|l| path? l }
-      .map do |l|
-        [
-          add_file_extension(to_absolute_path(l).gsub(Dir.pwd, ''), '.js'),
-          add_file_extension(to_absolute_path(l).gsub(Dir.pwd, ''), '.jsx'),
-        ]
+      .map do |path|
+        PARSABLE_FILE_TYPES.map {|filetype| add_file_extension(to_absolute_path(path).gsub(Dir.pwd, ''), filetype) }
       end
         .map {|paths| to_real_path paths }
         .map {|path| TreeBuilder.call('.' + path) }
+  end
+
+  def open_file path
+    extname = File.extname(path)
+    if !PARSABLE_FILE_TYPES.include? extname
+      return []
+    end
+    File.open(path).each_line
   end
 
   def add_file_extension(path, extension)
@@ -44,7 +55,7 @@ class TreeBuilder < Struct.new(:entrypoint)
   end
 
   def path? line
-    line.include? '.'
+    line.start_with?('.') || line.start_with?('/')
   end
 
   def to_absolute_path line

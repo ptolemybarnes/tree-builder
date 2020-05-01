@@ -24,6 +24,10 @@ describe TreeBuilder do
               node: "./fixtures/ku.js"
             }
           ]
+        },
+        {
+          node: "./fixtures/image.png",
+          children: []
         }
       ]
     });
