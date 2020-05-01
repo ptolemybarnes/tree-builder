@@ -1,0 +1,2898 @@
+import React from 'react';
+import { storiesOf } from '@storybook/react';
+import WidgetHistoryRow from '../../src/main/frontend/components/History/Widget/Row/Row.jsx';
+import WidgetHistoryTable from '../../src/main/frontend/components/History/Widget/Table/Table.jsx';
+import { HistoryWidget } from '../../src/main/frontend/components/History/Widget/Widget.jsx';
+import HistoryDetailed from '../../src/main/frontend/components/History/Detailed/Detailed.jsx';
+import HistoryListItem from '../../src/main/frontend/components/History/List/Item/Item.jsx';
+import HistoryList from '../../src/main/frontend/components/History/List/List.jsx';
+import ListingItemMobile from '../../src/main/frontend/components/History/Mobile/List/Item/Item.jsx';
+import HistoryMobile from '../../src/main/frontend/components/History/Mobile/List/List.jsx';
+import Section from '../../src/main/frontend/components/Section/Section.jsx';
+import SectionTitle from '../../src/main/frontend/components/Section/Title/Title.jsx';
+import CallToActionLegacy from '../../src/main/frontend/components/Section/CallToAction/CallToActionLegacy.jsx';
+import { listingItems } from '../testData.js';
+import Types from '../../src/main/frontend/Types.js';
+import { getHistory } from '../../src/main/frontend/selectors/selectors.js';
+import initialState from '../initialState/address/address.js';
+import cityInitialState from '../initialState/city/city.js';
+import geoHappinessLevels from '../../src/main/frontend/geoHappinessLevels.js';
+import { WithRouterStoreProvider } from '../utils/StoreProvider.jsx';
+import { TAB } from '../../src/main/frontend/components/Navigation/Menu/menuConfig.js';
+import Page from '../pages/Page.jsx';
+import rootReducer from '../../src/main/frontend/reducer.js';
+
+import { scaleLinear } from 'd3-scale';
+import { formatLocale } from 'd3';
+
+import React from 'react';
+import { storiesOf } from '@storybook/react';
+import SomethingPreview from '../../src/main/frontend/components/SomethingPreviewWidget/SomethingPreview.jsx';
+import {StoreProvider} from '../utils/StoreProvider.jsx';
+import addressInitialState from '../initialState/address/address.js';
+
+import React from 'react';
+import { storiesOf } from '@storybook/react';
+import { StoreProvider } from '../utils/StoreProvider.jsx';
+import SellingDetailed from '../../src/main/frontend/components/Selling/Detailed/Detailed.jsx';
+import addressInitialState from '../initialState/address/address.js';
+
+import React from 'react';
+import StuffWidget from '../../src/main/frontend/components/Stuff/Widget/Widget.jsx';
+import { prices } from '../testData.js';
+import Types from '../../src/main/frontend/Types.js';
+
+import React from 'react';
+import { prices } from '../testData.js';
+import StuffWidgetRange from '../../src/main/frontend/components/Stuff/Widget/Range/Range.jsx';
+import sortBy from '../../src/main/frontend/utils/sortBy';
+import Button from '../../src/main/frontend/components/Button/Button';
+import { commercializationTypes } from '../../src/main/frontend/components/Navigation/Header/selectConfig.js';
+
+import React from 'react';
+import { storiesOf } from '@storybook/react';
+import { StoreProvider, WithRouterStoreProvider } from '../utils/StoreProvider.jsx';
+import WidgetStory from './WidgetStory.jsx';
+import { prices } from '../testData.js';
+import addressInitialState from '../initialState/address/address.js';
+import addressInitialStateNoNative from '../initialState/address/addressNoNativeStuff.js';
+import StuffDetailed from '../../src/main/frontend/components/Stuff/Detailed/Detailed.jsx';
+import { StatsBox } from '../../src/main/frontend/components/Stuff/StatsBox/StatsBox.jsx';
+import StatsBoxMobile from '../../src/main/frontend/components/Stuff/StatsBox/Mobile/Mobile.jsx';
+import Types from '../../src/main/frontend/Types.js';
+import StatsBoxItem from '../../src/main/frontend/components/Stuff/StatsBox/Item/Item.jsx';
+import StatsBoxItemMobile from '../../src/main/frontend/components/Stuff/StatsBox/Mobile/Item/Item.jsx';
+import WidgetRangeStory from './WidgetRangeStory.jsx';
+
+import React from 'react';
+import { storiesOf } from '@storybook/react';
+import Legend from '../../../src/main/frontend/components/Chart/Legend/Legend.jsx';
+import { Chart } from '../../../src/main/frontend/components/Chart/Chart.jsx';
+import { StoreProvider } from '../../utils/StoreProvider.jsx';
+import addressInitialState from '../../initialState/address/address.js';
+import Line from '../../../src/main/frontend/components/Chart/Line/Line.jsx';
+import Grid from '../../../src/main/frontend/components/Chart/Grid/Grid.jsx';
+import Axes from '../../../src/main/frontend/components/Chart/Axes/Axes.jsx';
+
+import { scaleLinear } from 'd3-scale';
+import { formatLocale, max as d3Max, min as d3Min } from 'd3';
+import {prices} from '../../testData.js';
+
+import React from 'react';
+import { storiesOf } from '@storybook/react';
+import Axes from '../../../src/main/frontend/components/Chart/Axes/Axes.jsx';
+import addressInitialState from '../../initialState/address/address.js';
+import { prices, svgDimensions } from '../../testData.js';
+import Grid from '../../../src/main/frontend/components/Chart/Grid/Grid.jsx';
+import Line from '../../../src/main/frontend/components/Chart/Line/Line.jsx';
+import Circles from '../../../src/main/frontend/components/Chart/Circles/Circles.jsx';
+import { StoreProvider } from '../../utils/StoreProvider.jsx';
+import StuffWidgetChart from '../../../src/main/frontend/components/Stuff/Widget/Chart/Chart.jsx';
+
+import React from 'react';
+import { MemoryRouter } from 'react-router';
+import { storiesOf } from '@storybook/react';
+import { Section } from '../../src/main/frontend/components/Section/Section.jsx';
+import SectionTitle from '../../src/main/frontend/components/Section/Title/Title.jsx';
+import CallToActionLegacy from '../../src/main/frontend/components/Section/CallToAction/CallToActionLegacy.jsx';
+import CallToAction from '../../src/main/frontend/components/Section/CallToAction/CallToAction.jsx';
+import { backgroundStaticMap } from '../testData.js';
+import Types from '../../src/main/frontend/Types.js';
+import { TAB } from '../../src/main/frontend/components/Navigation/Menu/menuConfig.js';
+
+import commonState from '../common';
+import { backgroundStaticMap, staticMaps } from '../../testData.js';
+import listingHistoryData from './listingHistoryData.json';
+import subHappinessInfo from '../subHappinessInfo.js';
+
+import commonState from '../common';
+import { backgroundStaticMap, staticMaps } from '../../testData.js';
+import listingHistoryData from './listingHistoryData.json';
+import subHappinessInfo from '../subHappinessInfo.js';
+
+import commonState from '../common';
+
+import commonState from '../common';
+import { backgroundStaticMap, staticMaps } from '../../testData.js';
+import listingHistoryData from './listingHistoryData.json';
+
+import Types from '../../src/main/frontend/Types';
+
+import {PRIMARY_BLUE, PRIMARY_GREEN} from '../../src/main/frontend/utils/colorPalette';
+
+import commonState from '../common';
+import { backgroundStaticMap, staticMaps } from '../../testData.js';
+
+import commonState from '../common';
+import { staticMaps, backgroundStaticMap } from '../../testData.js';
+import subHappinessInfo from '../subHappinessInfo.js';
+import listingHistoryData from '../address/listingHistoryData';
+
+import React from 'react';
+import { storiesOf } from '@storybook/react';
+import IndexpageApp from '../../src/main/frontend/legacy/indexpage/App';
+import indexpageReducer from '../../src/main/frontend/legacy/indexpage/Reducer';
+import Page from './Page';
+
+import React from 'react';
+import {applyMiddleware, compose, createStore} from 'redux';
+import thunkMiddleware from 'redux-thunk';
+import {Provider} from 'react-redux';
+
+import commonState from '../common';
+import { backgroundStaticMap, staticMaps } from '../../testData.js';
+import listingHistoryDataDistrict from './listingHistoryData.json';
+import subHappinessInfo from '../subHappinessInfo.js';
+
+import { applyMiddleware, compose, createStore } from 'redux';
+import thunkMiddleware from 'redux-thunk';
+import {Provider} from 'react-redux';
+import React from 'react';
+import {MemoryRouter} from 'react-router';
+import rootReducer from '../../src/main/frontend/reducer.js';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import DynamicMapMarkerOverlay from '../../src/main/frontend/components/DynamicMap/Marker/Overlay/Overlay.jsx';
+import {DynamicMap} from '../../src/main/frontend/components/DynamicMap/DynamicMap.jsx';
+import { GOOGLE_MAPS_LOCAL_PUBLIC_API_KEY } from '../initialState/common.js';
+
+import React from 'react';
+import { storiesOf } from '@storybook/react';
+import DynamicMapConnected from '../../src/main/frontend/components/DynamicMap/DynamicMap.jsx';
+import DynamicMapMarkerOverlay from '../../src/main/frontend/components/DynamicMap/Marker/Overlay/Overlay.jsx';
+import DynamicMapMarkerAddress from '../../src/main/frontend/components/DynamicMap/Marker/Address/Address.jsx';
+import Page from '../pages/Page.jsx';
+import initialStateAddress from '../initialState/address/address.js';
+import initialStateDistrict from '../initialState/district/district.js';
+import rootReducer from '../../src/main/frontend/reducer.js';
+import { NO_PRICE_RANGE } from '../../src/main/frontend/utils/globals.js';
+
+import React from 'react';
+import { storiesOf } from '@storybook/react';
+import StorybookConsole from 'react-storybook-console';
+import {Provider} from 'react-redux';
+import {applyMiddleware, compose, createStore} from 'redux';
+import thunkMiddleware from 'redux-thunk';
+import fetchMock from 'fetch-mock';
+import AddressSearchInput from '../../src/main/frontend/components/AddressSearch/Input/Input';
+import AddressSearchResults from '../../src/main/frontend/components/AddressSearch/Results/Results';
+import AddressSearch from '../../src/main/frontend/components/AddressSearch/AddressSearch';
+import GoogleAddressSearch from '../../src/main/frontend/components/GoogleAddressSearch/AddressSearch.jsx';
+import {addressSearchResults} from '../testData.js';
+import NavigationSidebar from '../../src/main/frontend/components/Navigation/Sidebar/Sidebar.jsx';
+import { WithRouterStoreProvider } from '../utils/StoreProvider';
+import rootReducer from '../../src/main/frontend/reducer';
+import actions from '../../src/main/frontend/components/AddressSearch/actions';
+import styles from '../../src/main/frontend/styles.less';
+import {GOOGLE_MAPS_LOCAL_PUBLIC_API_KEY} from '../initialState/common';
+import initialStateAddress from '../initialState/address/address.js';
+
+import React from 'react';
+import { storiesOf } from '@storybook/react';
+import { DemographicInfoWidget } from '../../src/main/frontend/components/DemographicInfo/Widget/Widget.jsx';
+import { getDemographicInfo } from '../../src/main/frontend/selectors/selectors.js';
+import addressInitialState from '../initialState/address/address.js';
+
+import React from 'react';
+import {storiesOf} from '@storybook/react';
+import { WhalePanel } from '../../../src/main/frontend/components/NewVersion/WhalePanel/WhalePanel';
+import Types from '../../../src/main/frontend/Types';
+
+import React from 'react';
+import { storiesOf } from '@storybook/react';
+import {PRIMARY_BLUE} from '../../../src/main/frontend/utils/colorPalette';
+
+import {storiesOf} from '@storybook/react';
+import React from 'react';
+import {CityInfo} from '../../../src/main/frontend/components/NewVersion/CityInfo/CityInfo';
+
+import {storiesOf} from '@storybook/react';
+import React from 'react';
+import {SomethingForm} from '../../../src/main/frontend/components/NewVersion/SomethingForm/SomethingForm';
+
+import {storiesOf} from '@storybook/react';
+import React from 'react';
+import RoomNumber from '../../../../src/main/frontend/components/NewVersion/SomethingForm/RoomNumber';
+
+import React from 'react';
+import { storiesOf } from '@storybook/react';
+import BlindGuess from '../../../src/main/frontend/components/NewVersion/BlindGuess/BlindGuess.jsx';
+
+import React from 'react';
+import {storiesOf} from '@storybook/react';
+import {Provider} from 'react-redux';
+import {createStore} from 'redux';
+import {MemoryRouter} from 'react-router';
+import NewVersionTeaser from '../../src/main/frontend/components/NewVersionTeaser/NewVersionTeaser';
+import Types from '../../src/main/frontend/Types';
+import initialState from './initialState.js';
+import {NewVersionMain} from '../../src/main/frontend/components/NewVersion/NewVersionMain';
+
+import React from 'react';
+import { storiesOf } from '@storybook/react';
+import { QuarterlyDeltaIndicators } from '../../../src/main/frontend/components/NewVersion/QuarterlyDeltaIndicators/QuarterlyDeltaIndicators.jsx';
+import {PRIMARY_BLUE, PRIMARY_GREEN} from '../../../src/main/frontend/utils/colorPalette';
+
+import React from 'react';
+import { storiesOf } from '@storybook/react';
+import { Whale } from '../../src/main/frontend/components/Whale/Whale.jsx';
+import initialState from '../initialState/common.js';
+
+import React from 'react';
+import Modal from '../../src/main/frontend/components/Utils/Modal/Modal.jsx';
+
+import React from 'react';
+import RleWidget from '../../src/main/frontend/components/RleWidget/RleWidget.jsx';
+import {RLE_WIDGET_LOCAL_URL} from '../initialState/common.js';
+
+import React from 'react';
+import PriceCheckInput from '../../src/main/frontend/components/PriceCheckInput/PriceCheckInput.jsx';
+import {profileTypes} from '../../src/main/frontend/components/PriceCheckInput/stylingProfiles.js';
+import Types from '../../src/main/frontend/Types.js';
+
+import React from 'react';
+import ABTest, { ABTestStatus } from '../../src/main/frontend/abtesting/ABTest.jsx';
+
+import React from 'react';
+import PriceCheckWidget from '../../src/main/frontend/components/PriceCheck/Widget/Widget.jsx';
+import Types from '../../src/main/frontend/Types.js';
+
+import React from 'react';
+import subHappinessInfo from '../initialState/subHappinessInfo.js';
+import geoHappinessLevels from '../../src/main/frontend/geoHappinessLevels.js';
+import Button from '../../src/main/frontend/components/Button/Button.jsx';
+
+import React from 'react';
+import {storiesOf} from '@storybook/react';
+import {MemoryRouter} from 'react-router';
+import ABTestStory from './ABTestStory.jsx';
+import Input from '../../src/main/frontend/components/Input/Input';
+import Dropdown from '../../src/main/frontend/components/Dropdown/Dropdown.jsx';
+import PricePerMeter from '../../src/main/frontend/components/Utils/PricePerMeter/PricePerMeter.jsx';
+import ModalStory from './ModalStory.jsx';
+import HistoryWidgetLabel from '../../src/main/frontend/components/History/Widget/Label/Label.jsx';
+import StuffWidgetRange from '../../src/main/frontend/components/Stuff/Widget/Range/Range.jsx';
+import Button from '../../src/main/frontend/components/Button/Button.jsx';
+import WidgetFrame from '../../src/main/frontend/components/Utils/Widget/Frame/Frame.jsx';
+import WidgetTitle, { ALIGN } from '../../src/main/frontend/components/Utils/Widget/Title/Title.jsx';
+import WidgetIcon from '../../src/main/frontend/components/Utils/Widget/Icon/Icon.jsx';
+import ErrorBoundary from '../../src/main/frontend/components/Utils/ErrorBoundary/ErrorBoundary.jsx';
+import ErrorBoundaryTrigger from '../../src/main/frontend/components/Utils/ErrorBoundary/Trigger/Trigger.jsx';
+import TitleWithText from '../../src/main/frontend/components/TitleWithText/TitleWithText.jsx';
+import PriceCheckInputStory from './PriceCheckInputStory.jsx';
+import { HeaderClassUpdater } from '../../src/main/frontend/components/StaticHeader/HeaderClassUpdater.jsx';
+import RleWidgetStory from './RleWidgetStory.jsx';
+import { prices } from '../testData.js';
+import staticHeader from '../utils/staticHeader.html';
+import PriceDevelopmentIcon from '../../src/main/frontend/assets/images/price_development_black.svg';
+import StaticMapWidget from '../../src/main/frontend/components/StaticMapWidget/StaticMapWidget.jsx';
+import SubHappinessInfoWidgetStroy from './SubHappinessInfoWidgetStroy.jsx';
+
+import React from 'react';
+import {storiesOf} from '@storybook/react';
+import PriceCheckDetailed from '../../src/main/frontend/components/PriceCheck/Detailed/Detailed.jsx';
+import {StoreProvider, WithRouterStoreProvider} from '../utils/StoreProvider.jsx';
+import PriceCheckWidgetStory from './PriceCheckWidgetStory.jsx';
+import Placeholder from '../../src/main/frontend/components/PriceCheck/Widget/Placeholder/Placeholder.jsx';
+import addressInitialState from '../initialState/address/address.js';
+import InfoBox from '../../src/main/frontend/components/PriceCheck/Detailed/InfoBox.jsx';
+
+import React from 'react';
+import { storiesOf } from '@storybook/react';
+import HomePage from '../../src/main/frontend/components/HomePage/HomePage.jsx';
+import AmazingPage from '../../src/main/frontend/components/AmazingPage/AmazingPage.jsx';
+import rootReducer from '../../src/main/frontend/reducer.js';
+import addressInitialState from '../initialState/address/address.js';
+import cityInitialState from '../initialState/city/city';
+import regionInitialState from '../initialState/region/region';
+import districtInitialState from '../initialState/district/district';
+import streetInitialState from '../initialState/street/street';
+import Page from './Page.jsx';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import { applyMiddleware, compose, createStore } from 'redux';
+import thunkMiddleware from 'redux-thunk';
+import staticHeader from '../utils/staticHeader.html';
+import styles from './styles.less';
+import staticFooter from '../utils/staticFooter.html';
+import AppProvider from '../../src/main/frontend/components/AppProvider/AppProvider.jsx';
+
+import React from 'react';
+import { storiesOf } from '@storybook/react';
+import WidgetStory from './WidgetStory.jsx';
+import LoaderStory from './PlaceholderStory.jsx';
+import { breadcrumbParts, cityStateBreadcrumbParts, staticMaps } from '../testData.js';
+import HeaderBreadcrumb from '../../src/main/frontend/components/Header/Breadcrumb/Breadcrumb.jsx';
+import HeaderTitle from '../../src/main/frontend/components/Header/Title/Title.jsx';
+import HeaderStaticMap from '../../src/main/frontend/components/Header/StaticMap/StaticMap.jsx';
+
+import React from 'react';
+import { address, geohierarchy, staticMaps } from '../testData.js';
+import { Header } from '../../src/main/frontend/components/Header/Header.jsx';
+import geoHappinessLevels from '../../src/main/frontend/geoHappinessLevels.js';
+
+import React from 'react';
+import { geohierarchy, staticMaps, address } from '../testData.js';
+import { Header } from '../../src/main/frontend/components/Header/Header.jsx';
+import geoHappinessLevels from '../../src/main/frontend/geoHappinessLevels.js';
+
+import React from 'react';
+import chai, { expect } from 'chai';
+import { shallow, mount } from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import sinon from 'sinon';
+import sinonChai from 'sinon-chai';
+import ABTest, { ABTestStatus } from '../../../../main/frontend/abtesting/ABTest.jsx';
+
+import {expect} from 'chai';
+
+import fetchMock from 'fetch-mock';
+import { expect } from 'chai';
+import {gApi} from '../../../../main/frontend/apis/gApi';
+
+import fetchMock from 'fetch-mock';
+import { expect } from 'chai';
+import somethingJson from '../utils/somethingExample';
+import {somethingApi, post} from '../../../../main/frontend/apis/somethingApi';
+import apartmentBuyPostResponse from '../utils/apartmentBuyPostResponse';
+
+import {expect} from 'chai';
+import querystring from 'query-string';
+import {authUrl} from '../../../../main/frontend/auth/authUrl';
+
+import fetchMock from 'fetch-mock';
+import {stringify} from 'query-string';
+import { expect } from 'chai';
+import priceTrendJson from '../utils/priceTrendExample.json';
+import * as priceTrendApi from '../../../../main/frontend/apis/priceTrendApi';
+
+import React from 'react';
+import chai, {expect} from 'chai';
+import configureMockStore from 'redux-mock-store';
+import thunk from 'redux-thunk';
+import {shallow} from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import fetchMock from 'fetch-mock';
+import sinon from 'sinon';
+import {DesktopAndTablet} from '../../../../../main/frontend/legacy/common/MediaComponents.jsx';
+import {AddressSearchResults} from '../../../../../main/frontend/legacy/indexpage/AddressSearchResults.jsx';
+import ReduxAddressSearch from '../../../../../main/frontend/legacy/indexpage/AddressSearch.jsx';
+import createMockMediaMatcher from '../common/MockMediaMatcher.jsx';
+import tracking from '../../../../../main/frontend/tracking/tracking.js';
+
+import { expect } from 'chai';
+import reducer from '../../../../../main/frontend/legacy/indexpage/Reducer.jsx';
+import Actions from '../../../../../main/frontend/legacy/indexpage/Actions.jsx';
+
+import { expect } from 'chai';
+import configureMockStore from 'redux-mock-store';
+import thunk from 'redux-thunk';
+import fetchMock from 'fetch-mock';
+import Actions from '../../../../../main/frontend/legacy/indexpage/Actions.jsx';
+
+import React from 'react';
+import chai, { expect } from 'chai';
+import { shallow } from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import GeoElementsList from '../../../../../main/frontend/legacy/geoelements/GeoElementsList.jsx';
+
+import { expect } from 'chai';
+import googleMap from '../../../../../main/frontend/legacy/common/googleMap.js';
+
+import {expect} from 'chai';
+import titleExtractor from '../../../../main/frontend/utils/titleExtractor';
+import geoHappinessLevels from '../../../../main/frontend/geoHappinessLevels';
+
+import {assert, expect} from 'chai';
+import {setSearchParams, generateQueryStr} from '../../../../main/frontend/utils/urlUtils.js';
+
+import { expect } from 'chai';
+import { calculateDeltaInPercent, formatDEIgnoreTailingZeroDecimals, clearDimensionFromStringNumber } from '../../../../main/frontend/utils/NumbersHelper.js';
+
+import {expect} from 'chai';
+import {cmpParams, getIBWLink} from '../../../../main/frontend/utils/priceCalcLinkHelper';
+import Types from '../../../../main/frontend/Types.js';
+
+import React from 'react';
+import chai, {expect} from 'chai';
+import {shallow} from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import GeoElementsList from '../../../../main/frontend/legacy/geoelements/GeoElementsList.jsx';
+
+import React from 'react';
+import chai, { expect } from 'chai';
+import { shallow } from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import HistoryWidgetLabel from '../../../../../../../main/frontend/components/History/Widget/Label/Label.jsx';
+
+import React from 'react';
+import chai, { expect } from 'chai';
+import { shallow } from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import * as sinon from 'sinon';
+import sinonChai from 'sinon-chai';
+import HistoryWidgetRow from '../../../../../../../main/frontend/components/History/Widget/Row/Row';
+import tracking from '../../../../../../../main/frontend/tracking/tracking.js';
+import { LISTINGS_WIDGET_ACTION_VIEW_EXPOSE } from '../../../../../../../main/frontend/tracking/trackingNaming.js';
+
+import React from 'react';
+import chai, { expect } from 'chai';
+import configureMockStore from 'redux-mock-store';
+import thunk from 'redux-thunk';
+import { shallow } from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import ConnectedHistoryWidget, {HistoryWidget} from '../../../../../../main/frontend/components/History/Widget/Widget.jsx';
+import WidgetTitle from '../../../../../../main/frontend/components/Utils/Widget/Title/Title.jsx';
+import Button from '../../../../../../main/frontend/components/Button/Button.jsx';
+import WidgetFrame from '../../../../../../main/frontend/components/Utils/Widget/Frame/Frame.jsx';
+import HistoryWidgetTable from '../../../../../../main/frontend/components/History/Widget/Table/Table.jsx';
+import HistoryWidgetLabel from '../../../../../../main/frontend/components/History/Widget/Label/Label.jsx';
+import Types from '../../../../../../main/frontend/Types.js';
+import addressInitState from '../../../../../../../stories/initialState/address/address.js';
+import HistoryWidgetRow from '../../../../../../main/frontend/components/History/Widget/Row/Row';
+import BuildingsIcon from '../../../../../../main/frontend/icons/BuildingsIcon';
+
+import React from 'react';
+import chai, { expect } from 'chai';
+import { shallow } from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import HistoryWidgetTable from '../../../../../../../main/frontend/components/History/Widget/Table/Table.jsx';
+import HistoryWidgetRow from '../../../../../../../main/frontend/components/History/Widget/Row/Row.jsx';
+import { getHistory } from '../../../../../../../main/frontend/selectors/selectors.js';
+import addressInitState from '../../../../../../../../stories/initialState/address/address.js';
+
+import {expect} from 'chai';
+import {NOT_SPECIFIED} from '../../../../../main/frontend/utils/globals.js';
+
+import React from 'react';
+import chai, {expect} from 'chai';
+import {shallow} from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import {Desktop, Tablet} from '../../../../../../../../main/frontend/components/Utils/MediaComponents/MediaComponents.jsx';
+
+import React from 'react';
+import chai, { expect } from 'chai';
+import { shallow } from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import HistoryList from '../../../../../../main/frontend/components/History/List/List.jsx';
+import HistoryMobileList from '../../../../../../main/frontend/components/History/Mobile/List/List.jsx';
+import SectionTitle from '../../../../../../main/frontend/components/Section/Title/Title.jsx';
+import CallToActionLegacy from '../../../../../../main/frontend/components/Section/CallToAction/CallToActionLegacy.jsx';
+import { listingsForSomethingType } from '../../../../../../main/frontend/selectors/selectors.js';
+import addressInitState from '../../../../../../../stories/initialState/address/address.js';
+import featureSwitchReaderFactory from '../../../../../../main/frontend/utils/featureSwitchReader.js';
+import CallToAction from '../../../../../../main/frontend/components/Section/CallToAction/CallToAction.jsx';
+import Types from '../../../../../../main/frontend/Types.js';
+import { INTERACTIVE_MAP_CTA, STATIC_MAP_CTA } from '../../../../../../main/frontend/tracking/trackingNaming.js';
+
+import React from 'react';
+import chai, { expect } from 'chai';
+import { shallow } from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import HistoryMobileListItem from '../../../../../../../../main/frontend/components/History/Mobile/List/Item/Item';
+import MapPinIcon from '../../../../../../../../main/frontend/assets/images/map_icon.svg';
+import AgentIcon from '../../../../../../../../main/frontend/assets/images/agent_icon.svg';
+import ExposeIcon from '../../../../../../../../main/frontend/assets/images/expose_icon.svg';
+
+import React from 'react';
+import chai, { expect } from 'chai';
+import { shallow, mount} from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import HistoryMobileList from '../../../../../../../main/frontend/components/History/Mobile/List/List.jsx';
+import {getHistory} from '../../../../../../../main/frontend/selectors/selectors.js';
+import addressInitState from '../../../../../../../../stories/initialState/address/address.js';
+
+import React from 'react';
+import chai, { expect } from 'chai';
+import { shallow, mount } from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import sinon from 'sinon';
+import Modal from '../../../../../../../main/frontend/components/Utils/Modal/Modal.jsx';
+import HistoryMobileSortBy from '../../../../../../../main/frontend/components/History/Mobile/SortBy/SortBy.jsx';
+import sortingOptions from '../../../../../../../main/frontend/components/History/Mobile/SortBy/sortByConfig.js';
+
+import React from 'react';
+import chai, { expect } from 'chai';
+import { shallow, mount } from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import HistoryListItemOptions from '../../../../../../../../main/frontend/components/History/List/Item/Options/Options.jsx';
+
+import React from 'react';
+import chai, { expect } from 'chai';
+import { shallow } from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import cloneDeep from 'lodash/cloneDeep';
+import HistoryList from '../../../../../../main/frontend/components/History/List/List.jsx';
+import addressInitState from '../../../../../../../stories/initialState/address/addressForSorting.js';
+import { getHistory } from '../../../../../../main/frontend/selectors/selectors.js';
+import headerConfig from '../../../../../../main/frontend/components/History/List/headerConfig.js';
+import { sortedItemsAscent, sortedItemsDescent } from '../sortedItems.js';
+
+import React from 'react';
+import chai, { expect } from 'chai';
+import { shallow } from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import HistoryListItem from '../../../../../../../main/frontend/components/History/List/Item/Item.jsx';
+import HistoryListItemOptions from '../../../../../../../main/frontend/components/History/List/Item/Options/Options.jsx';
+import MapPinIcon from '../../../../../../../main/frontend/assets/images/map_icon.svg';
+
+import React from 'react';
+import chai, { expect } from 'chai';
+import { shallow } from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import Dropdown from '../../../../../main/frontend/components/Dropdown/Dropdown.jsx';
+
+import React from 'react';
+import { shallow } from 'enzyme';
+import sinon from 'sinon';
+import { expect } from 'chai';
+import { GoliathTouchpointWrapper } from '../../../../../main/frontend/components/GoliathTouchpointWrapper/GoliathTouchpointWrapper';
+
+import React from 'react';
+import chai, {expect} from 'chai';
+import {shallow} from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import CallToActionLegacy from '../../../../../../main/frontend/components/Section/CallToAction/CallToActionLegacy.jsx';
+import PriceCheckInput from '../../../../../../main/frontend/components/PriceCheckInput/PriceCheckInput.jsx';
+import Types from '../../../../../../main/frontend/Types.js';
+
+import React from 'react';
+import chai, {expect} from 'chai';
+import {shallow} from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import {Section} from '../../../../../main/frontend/components/Section/Section';
+
+import React from 'react';
+import chai, {expect} from 'chai';
+import {shallow} from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import CallToAction from '../../../../../../main/frontend/components/Section/CallToAction/CallToAction.jsx';
+import PriceCheckInput from '../../../../../../main/frontend/components/PriceCheckInput/PriceCheckInput.jsx';
+import InfoTag from '../../../../../../main/frontend/components/InfoTag/InfoTag.jsx';
+import Types from '../../../../../../main/frontend/Types.js';
+import featureSwitchReaderFactory from '../../../../../../main/frontend/utils/featureSwitchReader.js';
+
+import React from 'react';
+import chai, {expect} from 'chai';
+import {shallow} from 'enzyme/build';
+import chaiEnzyme from 'chai-enzyme';
+import * as sinon from 'sinon';
+import { getHistory, getLocationName, getStuff } from '../../../../../main/frontend/selectors/selectors.js';
+import addressInitState from '../../../../../../stories/initialState/address/address.js';
+import {SomethingPreviewWidget} from '../../../../../main/frontend/components/SomethingPreviewWidget/SomethingPreviewWidget.jsx';
+import SomethingPreview from '../../../../../main/frontend/components/SomethingPreviewWidget/SomethingPreview.jsx';
+import tracking from '../../../../../main/frontend/tracking/tracking.js';
+import {REAL_ESTATE_PREVIEW_CLICK} from '../../../../../main/frontend/tracking/trackingNaming.js';
+
+import React from 'react';
+import chai, {expect} from 'chai';
+import {shallow} from 'enzyme/build';
+import chaiEnzyme from 'chai-enzyme';
+import * as sinon from 'sinon';
+import SomethingPreview from '../../../../../main/frontend/components/SomethingPreviewWidget/SomethingPreview.jsx';
+import WidgetTitle from '../../../../../main/frontend/components/Utils/Widget/Title/Title.jsx';
+import Types from '../../../../../main/frontend/Types.js';
+import config from '../../../../../main/frontend/components/SomethingPreviewWidget/config.js';
+import PricePerMeter from '../../../../../main/frontend/components/Utils/PricePerMeter/PricePerMeter.jsx';
+
+import React from 'react';
+import {mount} from 'enzyme';
+import * as sinon from 'sinon';
+import {expect} from 'chai';
+import {PotentialSalePrice} from '../../../../../main/frontend/components/NewVersion/PotentialSalePrice/PotentialSalePrice';
+import {Desktop, Tablet, Mobile} from '../../../../../main/frontend/components/Utils/MediaComponents/MediaComponents';
+
+import React from 'react';
+import chai, { expect } from 'chai';
+import { shallow } from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import { SellingDetailed } from '../../../../../../main/frontend/components/Selling/Detailed/Detailed.jsx';
+import config from '../../../../../../main/frontend/components/Selling/Detailed/config.js';
+import SectionTitle from '../../../../../../main/frontend/components/Section/Title/Title.jsx';
+import Types from '../../../../../../main/frontend/Types.js';
+import Button from '../../../../../../main/frontend/components/Button/Button.jsx';
+
+import React from 'react';
+import chai, {expect} from 'chai';
+import {shallow} from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import Input from '../../../../../main/frontend/components/Input/Input';
+
+import React from 'react';
+import chai, {expect} from 'chai';
+import {shallow} from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import StuffDetailedChart from '../../../../../../../main/frontend/components/Stuff/Detailed/Chart/Chart.jsx';
+import ChartWrapped from '../../../../../../../main/frontend/components/Chart/Chart.jsx';
+
+import { expect } from 'chai';
+import { getLatestQuarterStats } from '../../../../../../main/frontend/components/Stuff/Detailed/utils';
+
+import { expect } from 'chai';
+
+import React from 'react';
+import chai, {expect} from 'chai';
+import {shallow, mount} from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import StuffWidget from '../../../../../main/frontend/components/Stuff/Widget/Widget.jsx';
+import StuffWidgetRange from '../../../../../main/frontend/components/Stuff/Widget/Range/Range.jsx';
+import Types from '../../../../../main/frontend/Types.js';
+import WidgetIcon from '../../../../../main/frontend/components/Utils/Widget/Icon/Icon.jsx';
+import WidgetTitle from '../../../../../main/frontend/components/Utils/Widget/Title/Title.jsx';
+import Button from '../../../../../main/frontend/components/Button/Button.jsx';
+import StuffWidgetChart from '../../../../../main/frontend/components/Stuff/Widget/Chart/Chart.jsx';
+import StuffMobileDetailedChart from '../../../../../main/frontend/components/Stuff/Mobile/Detailed/Chart/Chart.jsx';
+import {DesktopAndTablet, Mobile} from '../../../../../main/frontend/components/Utils/MediaComponents/MediaComponents.jsx';
+
+import React from 'react';
+import chai, { expect } from 'chai';
+import { mount, shallow } from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import thunk from 'redux-thunk';
+import { Provider } from 'react-redux';
+import { MemoryRouter } from 'react-router';
+import { applyMiddleware, createStore } from 'redux';
+import StuffDetailedConnected, { StuffDetailed } from '../../../../../../main/frontend/components/Stuff/Detailed/Detailed.jsx';
+import Section from '../../../../../../main/frontend/components/Section/Section.jsx';
+import SectionTitle from '../../../../../../main/frontend/components/Section/Title/Title.jsx';
+import Legend from '../../../../../../main/frontend/components/Chart/Legend/Legend.jsx';
+import PriceDetailedChart from '../../../../../../main/frontend/components/Stuff/Detailed/Chart/Chart.jsx';
+import StatsBox from '../../../../../../main/frontend/components/Stuff/StatsBox/StatsBox.jsx';
+import CallToActionLegacy from '../../../../../../main/frontend/components/Section/CallToAction/CallToActionLegacy.jsx';
+import geoHappinessPageState from '../../AmazingPage/geoHappinessPageState.js';
+import pricedata from './pricedata.js';
+import Types from '../../../../../../main/frontend/Types.js';
+import rootReducer from '../../../../../../main/frontend/reducer.js';
+
+import React from 'react';
+import chai, { expect } from 'chai';
+import { shallow } from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import StuffMobileDetailedChart from '../../../../../../../../main/frontend/components/Stuff/Mobile/Detailed/Chart/Chart.jsx';
+import {svgWidgetMobileMargins, ticksConfigWidgetMobile} from '../../../../../../../../main/frontend/components/Stuff/Widget/config.js';
+import ChartWrapped from '../../../../../../../../main/frontend/components/Chart/Chart.jsx';
+
+import React from 'react';
+import chai, {expect} from 'chai';
+import {shallow} from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import sinon from 'sinon';
+import StuffMobileDetailedControl from '../../../../../../../../main/frontend/components/Stuff/Mobile/Detailed/Control/Control.jsx';
+
+import React from 'react';
+import chai, {expect} from 'chai';
+import {shallow} from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import StuffWidgetRange from '../../../../../../main/frontend/components/Stuff/Widget/Range/Range.jsx';
+
+import React from 'react';
+import chai, {expect} from 'chai';
+import {shallow} from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import StatsBoxItemMobile from '../../../../../../../../main/frontend/components/Stuff/StatsBox/Mobile/Item/Item.jsx';
+import TrendIcon from '../../../../../../../../main/frontend/icons/Trend';
+import {PRIMARY_GREEN} from '../../../../../../../../main/frontend/utils/colorPalette';
+
+import React from 'react';
+import chai, { expect } from 'chai';
+import { shallow } from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import StatsBoxMobile from '../../../../../../../main/frontend/components/Stuff/StatsBox/Mobile/Mobile.jsx';
+import Types from '../../../../../../../main/frontend/Types';
+import { PRIMARY_BLUE, PRIMARY_GREEN } from '../../../../../../../main/frontend/utils/colorPalette';
+
+import React from 'react';
+import chai, {expect} from 'chai';
+import {shallow} from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import StatsBoxItem from '../../../../../../../main/frontend/components/Stuff/StatsBox/Item/Item.jsx';
+import TrendIcon from '../../../../../../../main/frontend/icons/Trend';
+import {PRIMARY_GREEN} from '../../../../../../../main/frontend/utils/colorPalette';
+
+import React from 'react';
+import chai, { expect } from 'chai';
+import { shallow } from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import sinon from 'sinon';
+import { StatsBox } from '../../../../../../main/frontend/components/Stuff/StatsBox/StatsBox.jsx';
+import StatsBoxItem from '../../../../../../main/frontend/components/Stuff/StatsBox/Item/Item.jsx';
+import Types, {BUY, getCommercializationType} from '../../../../../../main/frontend/Types';
+import { PRIMARY_BLUE, PRIMARY_GREEN } from '../../../../../../main/frontend/utils/colorPalette';
+import Close from '../../../../../../main/frontend/icons/Close';
+
+import React from 'react';
+import chai, {expect} from 'chai';
+import {shallow} from 'enzyme/build';
+import chaiEnzyme from 'chai-enzyme';
+import * as sinon from 'sinon';
+import tracking from '../../../../../main/frontend/tracking/tracking.js';
+import subHappinessInfo from './subHappinessInfoData.js';
+import {EXPLORE_SEO_LINKS, EXPAND_SEO_LINKS} from '../../../../../main/frontend/tracking/trackingNaming.js';
+import geoHappinessLevels from '../../../../../main/frontend/geoHappinessLevels.js';
+import WidgetTitle from '../../../../../main/frontend/components/Utils/Widget/Title/Title.jsx';
+import subHappinessInfoConfig from '../../../../../main/frontend/components/SubHappinessInfoWidget/config.js';
+
+import React from 'react';
+import chai, {expect} from 'chai';
+import {shallow} from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import Legend from '../../../../../../main/frontend/components/Chart/Legend/Legend.jsx';
+
+import React from 'react';
+import chai, {expect} from 'chai';
+import {shallow} from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import Axes from '../../../../../../main/frontend/components/Chart/Axes/Axes.jsx';
+import Axis from '../../../../../../main/frontend/components/Chart/Axis/Axis.jsx';
+
+import React from 'react';
+import chai, {expect} from 'chai';
+import {shallow} from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import sinon from 'sinon';
+import { Chart, HighlightedCircles } from '../../../../../main/frontend/components/Chart/Chart.jsx';
+import Grid from '../../../../../main/frontend/components/Chart/Grid/Grid.jsx';
+import Axes from '../../../../../main/frontend/components/Chart/Axes/Axes.jsx';
+import Line from '../../../../../main/frontend/components/Chart/Line/Line.jsx';
+import Circles from '../../../../../main/frontend/components/Chart/Circles/Circles.jsx';
+import { DesktopAndTablet} from '../../../../../main/frontend/components/Utils/MediaComponents/MediaComponents';
+
+import React from 'react';
+import chai, {expect} from 'chai';
+import {shallow} from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import sinon from 'sinon';
+import Circles from '../../../../../../main/frontend/components/Chart/Circles/Circles.jsx';
+import { scales, data } from '../config.js';
+
+import { scaleLinear } from 'd3-scale';
+
+import React from 'react';
+import chai, {expect} from 'chai';
+import {shallow} from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import { line } from 'd3';
+import Line from '../../../../../../main/frontend/components/Chart/Line/Line.jsx';
+import { scales, data } from '../config.js';
+
+import React from 'react';
+import chai, {expect} from 'chai';
+import {mount} from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import Axis from '../../../../../../main/frontend/components/Chart/Axis/Axis.jsx';
+import { scales, ticks } from '../config.js';
+
+import React from 'react';
+import chai, {expect} from 'chai';
+import {shallow} from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import Grid from '../../../../../../main/frontend/components/Chart/Grid/Grid.jsx';
+import GridLines from '../../../../../../main/frontend/components/Chart/Grid/Lines/Lines.jsx';
+
+import React from 'react';
+import chai, {expect} from 'chai';
+import {mount} from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import GridLines from '../../../../../../../main/frontend/components/Chart/Grid/Lines/Lines.jsx';
+import { scales, xValues } from '../../config.js';
+
+import React from 'react';
+import chai, {expect} from 'chai';
+import {mount} from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import {createStore} from 'redux';
+import {MemoryRouter} from 'react-router';
+import {Provider} from 'react-redux';
+import NavigationSidebar from '../../../../../../main/frontend/components/Navigation/Sidebar/Sidebar.jsx';
+import Header, {NavigationHeader} from '../../../../../../main/frontend/components/Navigation/Header/Header.jsx';
+import NavigationMenu from '../../../../../../main/frontend/components/Navigation/Menu/Menu.jsx';
+import BurgerMenu from '../../../../../../main/frontend/components/Navigation/BurgerMenu/BurgerMenu.jsx';
+import AddressSearch from '../../../../../../main/frontend/components/AddressSearch/AddressSearch.jsx';
+import ToggleButton from '../../../../../../main/frontend/components/Navigation/Toggle/Button/Button.jsx';
+import {TAB} from '../../../../../../main/frontend/components/Navigation/Menu/menuConfig.js';
+import featureSwitchReaderFactory from '../../../../../../main/frontend/utils/featureSwitchReader';
+import myCityInitialState from '../../NewVersion/initialStateTestResource';
+
+import React from 'react';
+import chai, { expect } from 'chai';
+import { shallow, mount } from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import sinon from 'sinon';
+import thunk from 'redux-thunk';
+import configureMockStore from 'redux-mock-store';
+import { Provider } from 'react-redux';
+import { MemoryRouter } from 'react-router';
+import NavigationBurgerMenuConnected, { NavigationBurgerMenu } from '../../../../../../main/frontend/components/Navigation/BurgerMenu/BurgerMenu.jsx';
+import Modal from '../../../../../../main/frontend/components/Utils/Modal/Modal.jsx';
+import Header from '../../../../../../main/frontend/components/Navigation/Header/Header.jsx';
+import NavigationMenu from '../../../../../../main/frontend/components/Navigation/Menu/Menu.jsx';
+import AddressSearch from '../../../../../../main/frontend/components/AddressSearch/AddressSearch.jsx';
+import Types from '../../../../../../main/frontend/Types.js';
+import { TAB } from '../../../../../../main/frontend/components/Navigation/Menu/menuConfig.js';
+
+import React from 'react';
+import chai, { expect } from 'chai';
+import { mount } from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import NavigationTitle from '../../../../../../main/frontend/components/Navigation/Title/Title.jsx';
+
+import React from 'react';
+import chai, { expect } from 'chai';
+import { shallow } from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import sinon from 'sinon';
+import NavigationTab from '../../../../../../main/frontend/components/Navigation/Tab/Tab.jsx';
+import NavigationIcon from '../../../../../../main/frontend/components/Navigation/Icon/Icon.jsx';
+import Tab from '../../../../../../main/frontend/components/Navigation/Menu/TabConfig.js';
+import HomeIcon from '../../../../../../main/frontend/icons/Home.jsx';
+
+import React from 'react';
+import chai, { expect } from 'chai';
+import { shallow } from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import sinon from 'sinon';
+import thunk from 'redux-thunk';
+import configureMockStore from 'redux-mock-store';
+import ConnerctedNavigationToggleButton, { NavigationToggleButton } from '../../../../../../../main/frontend/components/Navigation/Toggle/Button/Button.jsx';
+import NavigationIcon from '../../../../../../../main/frontend/components/Navigation/Icon/Icon.jsx';
+import ArrowRight from '../../../../../../../main/frontend/icons/ChevronCircleRight.jsx';
+import ArrowLeft from '../../../../../../../main/frontend/icons/ChevronCircleLeft.jsx';
+
+import React from 'react';
+import chai, { expect } from 'chai';
+import { mount } from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import sinon from 'sinon';
+import { NavigationMenu } from '../../../../../../main/frontend/components/Navigation/Menu/Menu.jsx';
+import NavigationTab from '../../../../../../main/frontend/components/Navigation/Tab/Tab.jsx';
+import { TAB, getActiveTab } from '../../../../../../main/frontend/components/Navigation/Menu/menuConfig.js';
+import featureSwitchReaderFactory from '../../../../../../main/frontend/utils/featureSwitchReader';
+import {FEATURE_PUBLIC_ENTRY_POINT} from '../../../../../../main/frontend/utils/globals';
+
+import React from 'react';
+import chai, { expect } from 'chai';
+import { shallow } from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import NavigationIcon from '../../../../../../main/frontend/components/Navigation/Icon/Icon.jsx';
+
+import React from 'react';
+import chai, { expect } from 'chai';
+import { shallow, mount } from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import thunk from 'redux-thunk';
+import configureMockStore from 'redux-mock-store';
+import sinon from 'sinon';
+import sinonChai from 'sinon-chai';
+import { ConnectedNavigationHeader, NavigationHeader } from '../../../../../../main/frontend/components/Navigation/Header/Header.jsx';
+import NavigationTitle from '../../../../../../main/frontend/components/Navigation/Title/Title.jsx';
+import Dropdown from '../../../../../../main/frontend/components/Dropdown/Dropdown.jsx';
+import Types from '../../../../../../main/frontend/Types.js';
+import { TAB } from '../../../../../../main/frontend/components/Navigation/Menu/menuConfig.js';
+
+import React from 'react';
+import chai, {expect} from 'chai';
+import {shallow, mount} from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import sinon from 'sinon';
+import sinonChai from 'sinon-chai';
+import {MemoryRouter} from 'react-router';
+import PriceCheckInputConnected, {PriceCheckInput} from '../../../../../main/frontend/components/PriceCheckInput/PriceCheckInput.jsx';
+import somethingType from '../../../../../main/frontend/Types.js';
+import {HOUSE_BUY, APARTMENT_BUY} from '../../../../../main/frontend/components/PriceCheck/Widget/somethingTypeConfig.js';
+import {profileTypes} from '../../../../../main/frontend/components/PriceCheckInput/stylingProfiles.js';
+import inputsConfig from '../../../../../main/frontend/components/PriceCheckInput/inputsConfig.js';
+import {TAB} from '../../../../../main/frontend/components/Navigation/Menu/menuConfig';
+import {rentPriceCheckLink} from '../../../../../main/frontend/utils/priceCalcLinkHelper';
+
+import React from 'react';
+import chai, {expect} from 'chai';
+import {shallow} from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import PricePerMeter from '../../../../../../main/frontend/components/Utils/PricePerMeter/PricePerMeter';
+import {PRIMARY_GREEN} from '../../../../../../main/frontend/utils/colorPalette';
+
+import React from 'react';
+import chai, {expect} from 'chai';
+import {shallow} from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import WidgetTitle from '../../../../../../../main/frontend/components/Utils/Widget/Title/Title';
+
+import React from 'react';
+import chai, {expect} from 'chai';
+import {shallow} from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import WidgetFrame from '../../../../../../../main/frontend/components/Utils/Widget/Frame/Frame.jsx';
+
+import React from 'react';
+import chai, {expect} from 'chai';
+import {shallow} from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import WidgetIcon from '../../../../../../../main/frontend/components/Utils/Widget/Icon/Icon';
+import PriceDevelopmentIcon from '../../../../../../../main/frontend/assets/images/price_development_black.svg';
+
+import React from 'react';
+import chai, {expect} from 'chai';
+import { shallow } from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import StickyContainer from '../../../../../../main/frontend/components/Utils/StickyContainer/StickyContainer.jsx';
+
+import React from 'react';
+import chai, {expect} from 'chai';
+import { shallow } from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import Modal from '../../../../../../main/frontend/components/Utils/Modal/Modal.jsx';
+
+import chai, { expect } from 'chai';
+import sinonChai from 'sinon-chai';
+import * as sinon from 'sinon';
+import GoliathPriceMapFeature from '../../../../../main/frontend/components/DynamicMap/GoliathPriceMapFeature.jsx';
+
+import chai, {expect} from 'chai';
+import chaiEnzyme from 'chai-enzyme';
+import sinon from 'sinon';
+import sinonChai from 'sinon-chai';
+import PriceMapFeature from '@com/com365-cxp-map/src/features/pricemap/PriceMapFeature';
+import HeatmapFeature from '../../../../../main/frontend/components/DynamicMap/HeatmapFeature.jsx';
+import GoliathPriceMapFeature from '../../../../../main/frontend/components/DynamicMap/GoliathPriceMapFeature.jsx';
+import BuildingShapesFeature from '../../../../../main/frontend/components/DynamicMap/BuildingShapesFeature.jsx';
+import { getShortName } from '../../../../../main/frontend/Types.js';
+
+import chai, {expect} from 'chai';
+import sinon from 'sinon';
+import sinonChai from 'sinon-chai';
+import RichMarkerFactory from '@com/com365-cxp-map/src/external/RichMarkerFactory.js';
+import markerDot from '../../../../../main/frontend/components/DynamicMap/markerDot.jsx';
+
+import chai, {expect} from 'chai';
+import sinon from 'sinon';
+import sinonChai from 'sinon-chai';
+import errorLogger from '../../../../../main/frontend/components/DynamicMap/errorLogger.js';
+import dynamicMapUtils, {getContainerHeight} from '../../../../../main/frontend/components/DynamicMap/dynamicMapUtils.js';
+import mockResponse from '../../../utils/utils';
+
+import chai, {expect} from 'chai';
+import sinon from 'sinon';
+import sinonChai from 'sinon-chai';
+import errorLogger from '../../../../../main/frontend/components/DynamicMap/errorLogger';
+
+import chai, { expect } from 'chai';
+import sinon from 'sinon';
+import sinonChai from 'sinon-chai';
+import RichMarkerFactory from '@com/com365-cxp-map/src/external/RichMarkerFactory.js';
+import AddressMarkerFeature from '../../../../../main/frontend/components/DynamicMap/AddressMarkerFeature.jsx';
+
+import chai, {expect} from 'chai';
+import * as sinon from 'sinon';
+import sinonChai from 'sinon-chai';
+import MarkerEvent from '@com/com365-cxp-map/src/features/styledMarker/MarkerEvent.js';
+import MarkerEventTypes from '@com/com365-cxp-map/src/features/styledMarker/MarkerEventTypes.js';
+import createMapModel, {updateHandler} from '../../../../../main/frontend/components/DynamicMap/createMapModel.js';
+import Types from '../../../../../main/frontend/Types.js';
+import markerDot from '../../../../../main/frontend/components/DynamicMap/markerDot.jsx';
+import { MAX_HEIGHT } from '../../../../../main/frontend/utils/globals';
+
+import chai, {expect} from 'chai';
+import chaiEnzyme from 'chai-enzyme';
+import sinon from 'sinon';
+import sinonChai from 'sinon-chai';
+import mockResponse from '../../../utils/utils.js';
+import BuildingShapesFeature from '../../../../../main/frontend/components/DynamicMap/BuildingShapesFeature.jsx';
+
+import React from 'react';
+import chai, { expect } from 'chai';
+import { shallow } from 'enzyme';
+import sinonChai from 'sinon-chai';
+import * as sinon from 'sinon';
+import InfoBubbleFactory from '@com/com365-cxp-map/src/external/InfoBubbleFactory.js';
+import RichMarkerFactory from '@com/com365-cxp-map/src/external/RichMarkerFactory.js';
+import FeatureManager from '@com/com365-cxp-map/src/features/FeatureManager.js';
+import MapContainer from '@com/com365-cxp-map/src/MapContainer.jsx';
+import InfoBubbleFeature from '@com/com365-cxp-map/src/features/infoBubble/InfoBubbleFeature.jsx';
+import StyledMarkerFeature from '@com/com365-cxp-map/src/features/styledMarker/StyledMarkerFeature.jsx';
+import { DynamicMap } from '../../../../../main/frontend/components/DynamicMap/DynamicMap.jsx';
+import AddressMarkerFeature from '../../../../../main/frontend/components/DynamicMap/AddressMarkerFeature.jsx';
+import HeatmapFeature from '../../../../../main/frontend/components/DynamicMap/HeatmapFeature.jsx';
+import Types from '../../../../../main/frontend/Types.js';
+import { updateHandler } from '../../../../../main/frontend/components/DynamicMap/createMapModel.js';
+
+import { expect } from 'chai';
+import sinon from 'sinon';
+import utilFunctions from '../../../../../../main/frontend/components/DynamicMap/Marker/utils.js';
+
+import React from 'react';
+import chai, { expect } from 'chai';
+import { shallow } from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import sinon from 'sinon';
+import DynamicMapMarkerAddress from '../../../../../../../main/frontend/components/DynamicMap/Marker/Address/Address.jsx';
+import { NO_PRICE_RANGE } from '../../../../../../../main/frontend/utils/globals.js';
+
+import React from 'react';
+import chai, { expect } from 'chai';
+import { shallow } from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import sinon from 'sinon';
+import sinonChai from 'sinon-chai';
+import DynamicMapMarkerOverlay from '../../../../../../../main/frontend/components/DynamicMap/Marker/Overlay/Overlay.jsx';
+
+import chai, { expect } from 'chai';
+import sinon from 'sinon';
+import sinonChai from 'sinon-chai';
+import RichMarkerFactory from '@com/com365-cxp-map/src/external/RichMarkerFactory.js';
+import markerLabel from '../../../../../main/frontend/components/DynamicMap/markerLabel.jsx';
+
+import React from 'react';
+import chai, { expect } from 'chai';
+import sinonChai from 'sinon-chai';
+import { shallow } from 'enzyme';
+import PriceMapLegendMobile from '../../../../../../main/frontend/components/DynamicMap/PriceMapLegend/PriceMapLegendMobile.jsx';
+import Types from '../../../../../../main/frontend/Types.js';
+import MarkerLegend from '../../../../../../main/frontend/components/DynamicMap/PriceMapLegend/MarkerLegend.jsx';
+import ColorLegend from '../../../../../../main/frontend/components/DynamicMap/PriceMapLegend/ColorLegend.jsx';
+import Modal from '../../../../../../main/frontend/components/Utils/Modal/Modal.jsx';
+import legendTexts from '../../../../../../main/frontend/components/DynamicMap/PriceMapLegend/legendTexts.jsx';
+
+import React from 'react';
+import chai, { expect } from 'chai';
+import sinonChai from 'sinon-chai';
+import { shallow } from 'enzyme';
+import ColorWithLabel from '../../../../../../main/frontend/components/DynamicMap/PriceMapLegend/ColorWithLabel.jsx';
+
+import React from 'react';
+import chai, {expect} from 'chai';
+import sinonChai from 'sinon-chai';
+import {shallow} from 'enzyme';
+import MarkerLegend from '../../../../../../main/frontend/components/DynamicMap/PriceMapLegend/MarkerLegend.jsx';
+import ColorWithLabel from '../../../../../../main/frontend/components/DynamicMap/PriceMapLegend/ColorWithLabel.jsx';
+
+import React from 'react';
+import chai, {expect} from 'chai';
+import sinonChai from 'sinon-chai';
+import {shallow} from 'enzyme';
+import ColorLegend from '../../../../../../main/frontend/components/DynamicMap/PriceMapLegend/ColorLegend.jsx';
+import ColorWithLabel from '../../../../../../main/frontend/components/DynamicMap/PriceMapLegend/ColorWithLabel.jsx';
+
+import React from 'react';
+import chai, { expect } from 'chai';
+import sinonChai from 'sinon-chai';
+import { mount, shallow } from 'enzyme';
+import { PriceMapLegendDesktop } from '../../../../../../main/frontend/components/DynamicMap/PriceMapLegend/PriceMapLegendDesktop.jsx';
+import Types from '../../../../../../main/frontend/Types.js';
+import MarkerLegend from '../../../../../../main/frontend/components/DynamicMap/PriceMapLegend/MarkerLegend.jsx';
+import ColorLegend from '../../../../../../main/frontend/components/DynamicMap/PriceMapLegend/ColorLegend.jsx';
+
+import React from 'react';
+import chai, { expect } from 'chai';
+import { shallow } from 'enzyme';
+import * as sinon from 'sinon';
+import sinonChai from 'sinon-chai';
+import { WhalePanel, DEFAULT_DETAILS } from '../../../../../../main/frontend/components/NewVersion/WhalePanel/WhalePanel.jsx';
+import somethingType from '../../../../../../main/frontend/Types.js';
+import {Desktop, Tablet, Mobile} from '../../../../../../main/frontend/components/Utils/MediaComponents/MediaComponents';
+
+import chai, { expect } from 'chai';
+import React from 'react';
+import { shallow } from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import * as sinon from 'sinon';
+import { NewVersionMain } from '../../../../../../main/frontend/components/NewVersion/NewVersionMain';
+import somethingExample from '../../../utils/somethingExample';
+import priceTrendExample from '../../../utils/priceTrendExample.json';
+
+import { expect } from 'chai';
+import { getRleURL, getHofURL } from '../../../../../main/frontend/components/NewVersion/urls.js';
+
+import fetchMock from 'fetch-mock';
+import { expect } from 'chai';
+import WhaleAPI from '../../../../../../main/frontend/components/NewVersion/WhalePanel/WhalePanelAPI';
+import { APARTMENT_BUY } from '../../../../../../main/frontend/components/PriceCheck/Widget/somethingTypeConfig';
+
+import React from 'react';
+import chai, {expect} from 'chai';
+import {shallow} from 'enzyme/build';
+import chaiEnzyme from 'chai-enzyme';
+import * as sinon from 'sinon';
+import StaticMapWidget from '../../../../../main/frontend/components/StaticMapWidget/StaticMapWidget.jsx';
+import Button from '../../../../../main/frontend/components/Button/Button.jsx';
+import tracking from '../../../../../main/frontend/tracking/tracking.js';
+
+import React from 'react';
+import chai, {expect} from 'chai';
+import {mount} from 'enzyme';
+import * as sinon from 'sinon';
+import sinonChai from 'sinon-chai';
+import chaiEnzyme from 'chai-enzyme';
+import {Provider} from 'react-redux';
+import {createStore} from 'redux';
+import {MemoryRouter} from 'react-router';
+import { CityInfo } from '../../../../../../main/frontend/components/NewVersion/CityInfo/CityInfo.jsx';
+import {WhalePanel} from '../../../../../../main/frontend/components/NewVersion/WhalePanel/WhalePanel.jsx';
+import myCityInitialState from '../initialStateTestResource';
+import NewVersionTablet from '../../../../../../main/frontend/components/NewVersion/NewVersionTablet/NewVersionTablet';
+import {HomeLinks} from '../../../../../../main/frontend/components/NewVersion/HomeLinks/HomeLinks';
+
+import React from 'react';
+import {mount} from 'enzyme';
+import chai, {expect} from 'chai';
+import * as sinon from 'sinon';
+import chaiEnzyme from 'chai-enzyme';
+import sinonChai from 'sinon-chai';
+import { HomeLinksMobile } from '../../../../../../main/frontend/components/NewVersion/HomeLinks/HomeLinksMobile/HomeLinksMobile.jsx';
+import {STUFF_HUB_LINK} from '../../../../../../main/frontend/tracking/trackingNaming.js';
+
+import {expect} from 'chai';
+import { areAllFieldsValid, runValidations } from '../../../../../../main/frontend/components/NewVersion/SomethingForm/validations';
+
+import React from 'react';
+import chai, {expect} from 'chai';
+import {mount} from 'enzyme';
+import * as sinon from 'sinon';
+import sinonChai from 'sinon-chai';
+import {SomethingForm} from '../../../../../../main/frontend/components/NewVersion/SomethingForm/SomethingForm';
+import AlertIcon from '../../../../../../main/frontend/components/NewVersion/SomethingForm/AlertIcon';
+import apartmentBuyPostResponse from '../../../utils/apartmentBuyPostResponse';
+
+import {mount} from 'enzyme';
+import {expect} from 'chai';
+import React from 'react';
+import * as sinon from 'sinon';
+import DropDown from '../../../../../../main/frontend/components/NewVersion/SomethingForm/DropDown';
+
+import React from 'react';
+import {mount} from 'enzyme';
+import chai, {expect} from 'chai';
+import * as sinon from 'sinon';
+import chaiEnzyme from 'chai-enzyme';
+import sinonChai from 'sinon-chai';
+import { HomeLinksDesktop } from '../../../../../../main/frontend/components/NewVersion/HomeLinks/HomeLinksDesktop/HomeLinksDesktop.jsx';
+import {STUFF_HUB_LINK} from '../../../../../../main/frontend/tracking/trackingNaming.js';
+
+import React from 'react';
+import {mount} from 'enzyme';
+import chai, {expect} from 'chai';
+import * as sinon from 'sinon';
+import chaiEnzyme from 'chai-enzyme';
+import sinonChai from 'sinon-chai';
+import { HomeLinksTablet } from '../../../../../../main/frontend/components/NewVersion/HomeLinks/HomeLinksTablet/HomeLinksTablets.jsx';
+import {STUFF_HUB_LINK} from '../../../../../../main/frontend/tracking/trackingNaming.js';
+
+import Types from '../../../../../main/frontend/Types';
+
+import {expect} from 'chai';
+
+import React from 'react';
+import {shallow} from 'enzyme';
+import {expect} from 'chai';
+import * as sinon from 'sinon';
+import {CityInfo} from '../../../../../../main/frontend/components/NewVersion/CityInfo/CityInfo';
+import {Desktop, Tablet, Mobile} from '../../../../../../main/frontend/components/Utils/MediaComponents/MediaComponents';
+
+import React from 'react';
+import chai, {expect} from 'chai';
+import {shallow} from 'enzyme';
+import sinonChai from 'sinon-chai';
+import chaiEnzyme from 'chai-enzyme';
+import BlindGuess from '../../../../../../main/frontend/components/NewVersion/BlindGuess/BlindGuess.jsx';
+import {Desktop, Tablet, Mobile} from '../../../../../../main/frontend/components/Utils/MediaComponents/MediaComponents';
+
+import React from 'react';
+import chai, {expect} from 'chai';
+import {mount} from 'enzyme';
+import * as sinon from 'sinon';
+import sinonChai from 'sinon-chai';
+import chaiEnzyme from 'chai-enzyme';
+import TrackableLink from '../../../../../../main/frontend/components/NewVersion/TrackableLink/TrackableLink.jsx';
+
+import React from 'react';
+import chai, {expect} from 'chai';
+import {mount} from 'enzyme';
+import * as sinon from 'sinon';
+import sinonChai from 'sinon-chai';
+import chaiEnzyme from 'chai-enzyme';
+import BlindGuessContainer from '../../../../../../main/frontend/components/NewVersion/BlindGuess/BlindGuessContainer.jsx';
+
+import React from 'react';
+import chai, {expect} from 'chai';
+import {mount} from 'enzyme';
+import * as sinon from 'sinon';
+import sinonChai from 'sinon-chai';
+import chaiEnzyme from 'chai-enzyme';
+import {Provider} from 'react-redux';
+import {createStore} from 'redux';
+import {MemoryRouter} from 'react-router';
+import { CityInfo } from '../../../../../../main/frontend/components/NewVersion/CityInfo/CityInfo.jsx';
+import {WhalePanel} from '../../../../../../main/frontend/components/NewVersion/WhalePanel/WhalePanel.jsx';
+import myCityInitialState from '../initialStateTestResource';
+import NewVersionMobile from '../../../../../../main/frontend/components/NewVersion/NewVersionMobile/NewVersionMobile';
+import {HomeLinks} from '../../../../../../main/frontend/components/NewVersion/HomeLinks/HomeLinks';
+
+import React from 'react';
+import chai, {expect} from 'chai';
+import {mount} from 'enzyme';
+import * as sinon from 'sinon';
+import sinonChai from 'sinon-chai';
+import chaiEnzyme from 'chai-enzyme';
+import {Provider} from 'react-redux';
+import {createStore} from 'redux';
+import {MemoryRouter} from 'react-router';
+import { CityInfo } from '../../../../../../main/frontend/components/NewVersion/CityInfo/CityInfo.jsx';
+import {WhalePanel} from '../../../../../../main/frontend/components/NewVersion/WhalePanel/WhalePanel.jsx';
+import myCityInitialState from '../initialStateTestResource';
+import {HomeLinks} from '../../../../../../main/frontend/components/NewVersion/HomeLinks/HomeLinks';
+
+import React from 'react';
+import chai, { expect } from 'chai';
+import { mount } from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import { applyMiddleware, createStore } from 'redux';
+import thunkMiddleware from 'redux-thunk';
+import { Provider } from 'react-redux';
+import { MemoryRouter } from 'react-router';
+import rootReducer from '../../../../../main/frontend/reducer';
+import regionLevelInitialState from '../../../../../../stories/initialState/region/region';
+import cityLevelInitialState from '../../../../../../stories/initialState/city/city';
+import districtLevelInitialState from '../../../../../../stories/initialState/district/district';
+import streetLevelInitialState from '../../../../../../stories/initialState/street/street';
+import addressLevelInitialState from '../../../../../../stories/initialState/address/address';
+import Dashboard from '../../../../../main/frontend/components/Dashboard/Dashboard';
+import { DemographicInfoWidget } from '../../../../../main/frontend/components/DemographicInfo/Widget/Widget.jsx';
+import StuffWidget from '../../../../../main/frontend/components/Stuff/Widget/Widget.jsx';
+import { HistoryWidget } from '../../../../../main/frontend/components/History/Widget/Widget.jsx';
+import { PriceCheckWidget } from '../../../../../main/frontend/components/PriceCheck/Widget/Widget.jsx';
+import LoadingStatus from '../../../../../main/frontend/components/LoadingStatus/LoadingStatus.jsx';
+import StaticMapWidget from '../../../../../main/frontend/components/StaticMapWidget/StaticMapWidget.jsx';
+import GoliathTouchpointWrapper from '../../../../../main/frontend/components/GoliathTouchpointWrapper/GoliathTouchpointWrapper.jsx';
+import Types from '../../../../../main/frontend/Types';
+import NewVersionTeaser from '../../../../../main/frontend/components/NewVersionTeaser/NewVersionTeaser.jsx';
+import HeaderBreadcrumb from '../../../../../main/frontend/components/Header/Breadcrumb/Breadcrumb.jsx';
+import HeaderTitle from '../../../../../main/frontend/components/Header/Title/Title.jsx';
+
+import {shallow} from 'enzyme/build';
+import chai, {expect} from 'chai';
+import React from 'react';
+import chaiEnzyme from 'chai-enzyme';
+import {Whale} from '../../../../../main/frontend/components/Whale/Whale';
+
+import React from 'react';
+import chai, {expect} from 'chai';
+import {shallow} from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import sinon from 'sinon';
+import sinonChai from 'sinon-chai';
+import reporter from '../../../../../main/frontend/tracking/tracking.js';
+import Button from '../../../../../main/frontend/components/Button/Button';
+
+import React from 'react';
+import chai, { expect } from 'chai';
+import { mount, shallow } from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import thunkMiddleware from 'redux-thunk';
+import { MemoryRouter } from 'react-router';
+import { Provider } from 'react-redux';
+import { applyMiddleware, compose, createStore } from 'redux';
+import AmazingPageConnected, { AmazingPage } from '../../../../../main/frontend/components/AmazingPage/AmazingPage.jsx';
+import Header from '../../../../../main/frontend/components/Header/Header.jsx';
+import { Tablet } from '../../../../../main/frontend/components/Utils/MediaComponents/MediaComponents.jsx';
+import geoHappinessPageProps from './geoHappinessPageProps.js';
+import { createSubTitle, createTitle } from '../../../../../main/frontend/utils/titleExtractor.js';
+import NavigationSidebar from '../../../../../main/frontend/components/Navigation/Sidebar/Sidebar.jsx';
+import { TAB, TAB_CONFIG } from '../../../../../main/frontend/components/Navigation/Menu/menuConfig.js';
+import initialState from '../../../../../../stories/initialState/address/address.js';
+import rootReducer from '../../../../../main/frontend/reducer.js';
+import featureSwitchReaderFactory from '../../../../../main/frontend/utils/featureSwitchReader.js';
+import {FEATURE_PUBLIC_ENTRY_POINT} from '../../../../../main/frontend/utils/globals';
+
+import geoHappinessLevels from '../../../../../main/frontend/geoHappinessLevels';
+import Types from '../../../../../main/frontend/Types';
+
+import geoHappinessLevels from '../../../../../main/frontend/geoHappinessLevels';
+import Types from '../../../../../main/frontend/Types';
+import { TAB } from '../../../../../main/frontend/components/Navigation/Menu/menuConfig.js';
+
+import React from 'react';
+import chai, { expect } from 'chai';
+import { mount } from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import { HeaderClassUpdater } from '../../../../../main/frontend/components/StaticHeader/HeaderClassUpdater.jsx';
+
+import React from 'react';
+import chai, { expect } from 'chai';
+import { shallow } from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import RleWidget from '../../../../../main/frontend/components/RleWidget/RleWidget.jsx';
+
+import React from 'react';
+import chai, {expect} from 'chai';
+import {shallow} from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import TitleWithText from '../../../../../main/frontend/components/TitleWithText/TitleWithText.jsx';
+
+import React from 'react';
+import chai, { expect } from 'chai';
+import { shallow } from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import Placeholder from '../../../../../main/frontend/components/Placeholder/Placeholder.jsx';
+import WidgetFrame from '../../../../../main/frontend/components/Utils/Widget/Frame/Frame.jsx';
+
+import React from 'react';
+import chai, { expect } from 'chai';
+import { shallow } from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import SquareBox from '../../../../../main/frontend/components/Placeholder/SquareBox.jsx';
+
+import React from 'react';
+import chai, {expect} from 'chai';
+import {shallow, mount} from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import configureMockStore from 'redux-mock-store';
+import thunk from 'redux-thunk';
+import {Provider} from 'react-redux';
+import {MemoryRouter} from 'react-router';
+import WidgetTitle from '../../../../../../main/frontend/components/Utils/Widget/Title/Title.jsx';
+import PriceCheckWidget from '../../../../../../main/frontend/components/PriceCheck/Widget/Widget.jsx';
+import CertificateIcon from '../../../../../../main/frontend/assets/images/certificate_icon.svg';
+import PriceCheckInput from '../../../../../../main/frontend/components/PriceCheckInput/PriceCheckInput.jsx';
+import geoHappinessPageProps from '../../AmazingPage/geoHappinessPageProps.js';
+import {PRICE_CHECK_INPUT_UPDATE} from '../../../../../../main/frontend/components/PriceCheck/actions';
+import Types from '../../../../../../main/frontend/Types';
+
+import React from 'react';
+import chai, { expect } from 'chai';
+import { shallow } from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import sinon from 'sinon';
+import InfoBox from '../../../../../../main/frontend/components/PriceCheck/Detailed/InfoBox.jsx';
+import Button from '../../../../../../main/frontend/components/Button/Button.jsx';
+import {infoBoxImageAndTextConfig} from '../../../../../../main/frontend/components/PriceCheck/Detailed/config';
+
+import React from 'react';
+import chai, {expect} from 'chai';
+import {shallow} from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import * as sinon from 'sinon';
+import {PriceCheckDetailed} from '../../../../../../main/frontend/components/PriceCheck/Detailed/Detailed.jsx';
+import Types from '../../../../../../main/frontend/Types.js';
+import SectionTitle from '../../../../../../main/frontend/components/Section/Title/Title.jsx';
+import RleWidget from '../../../../../../main/frontend/components/RleWidget/RleWidget.jsx';
+import InfoBox from '../../../../../../main/frontend/components/PriceCheck/Detailed/InfoBox.jsx';
+import Button from '../../../../../../main/frontend/components/Button/Button.jsx';
+
+import React from 'react';
+import chai, { expect } from 'chai';
+import { shallow } from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import { DemographicInfoWidget } from '../../../../../../main/frontend/components/DemographicInfo/Widget/Widget.jsx';
+import DemographicInfo from '../../../../../../main/frontend/assets/images/demographic_info.svg';
+import WidgetTitle from '../../../../../../main/frontend/components/Utils/Widget/Title/Title.jsx';
+import addressInitState from '../../../../../../../stories/initialState/address/address.js';
+import { getDemographicInfo } from '../../../../../../main/frontend/selectors/selectors.js';
+import {Desktop, Mobile, Tablet} from '../../../../../../main/frontend/components/Utils/MediaComponents/MediaComponents';
+import DESKTOP_ILLUSTRATION from '../../../../../../main/frontend/assets/images/demographic_widget_desktop_illustration.svg';
+import TABLET_ILLUSTRATION from '../../../../../../main/frontend/assets/images/demographic_widget_tablet_illustration.svg';
+import MOBILE_ILLUSTRATION from '../../../../../../main/frontend/assets/images/demographic_widget_mobile_illustration.svg';
+
+import React from 'react';
+import chai, { expect } from 'chai';
+import { shallow } from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import sinon from 'sinon';
+import LocationSwitcher from '../../../../../main/frontend/components/LocationSwitcher/LocationSwitcher.jsx';
+
+import { expect } from 'chai';
+import configureMockStore from 'redux-mock-store';
+import thunk from 'redux-thunk';
+import fetchMock from 'fetch-mock';
+import Actions from '../../../../../main/frontend/components/AddressSearch/actions.js';
+
+import React from 'react';
+import chai, { expect } from 'chai';
+import { shallow } from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import sinon from 'sinon';
+import AddressSearchInput from '../../../../../../main/frontend/components/AddressSearch/Input/Input.jsx';
+import AddressSearchIcon from '../../../../../../main/frontend/assets/images/address_search_icon.svg';
+
+import React from 'react';
+import chai, { expect } from 'chai';
+import { shallow, mount } from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import thunk from 'redux-thunk';
+import configureMockStore from 'redux-mock-store';
+import sinon from 'sinon';
+import fetchMock from 'fetch-mock';
+import {Provider} from 'react-redux';
+import AddressSearchConnected, {AddressSearch} from '../../../../../main/frontend/components/AddressSearch/AddressSearch.jsx';
+import AddressSearchInput from '../../../../../main/frontend/components/AddressSearch/Input/Input.jsx';
+import tracking from '../../../../../main/frontend/tracking/tracking.js';
+import AddressSearchResults from '../../../../../main/frontend/components/AddressSearch/Results/Results';
+import AddressSearchResultsItem from '../../../../../main/frontend/components/AddressSearch/Results/Item/Item';
+
+import { expect } from 'chai';
+import reducer from '../../../../../main/frontend/components/AddressSearch/reducer.js';
+import Actions from '../../../../../main/frontend/components/AddressSearch/actions.js';
+
+import React from 'react';
+import chai, { expect } from 'chai';
+import { shallow } from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import AddressSearchResults from '../../../../../../main/frontend/components/AddressSearch/Results/Results';
+import AddressSearchResultsItem from '../../../../../../main/frontend/components/AddressSearch/Results/Item/Item';
+
+import React from 'react';
+import chai, {expect} from 'chai';
+import {shallow, mount} from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import sinon from 'sinon';
+import AddressSearchResultsItem from '../../../../../../../main/frontend/components/AddressSearch/Results/Item/Item.jsx';
+
+import React from 'react';
+import chai, { expect } from 'chai';
+import { shallow } from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import sinon from 'sinon';
+import NewVersionTeaser from '../../../../../main/frontend/components/NewVersionTeaser/NewVersionTeaser.jsx';
+import Close from '../../../../../main/frontend/icons/Close.jsx';
+import {CLAIM_PROPERTY} from '../../../../../main/frontend/tracking/trackingNaming.js';
+
+import React from 'react';
+import chai, {expect} from 'chai';
+import {shallow} from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import HeaderTitle from '../../../../../../main/frontend/components/Header/Title/Title.jsx';
+import featureSwitchReaderFactory from '../../../../../../main/frontend/utils/featureSwitchReader.js';
+
+import React from 'react';
+import chai, { expect } from 'chai';
+import { shallow } from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import { Header } from '../../../../../main/frontend/components/Header/Header.jsx';
+import HeaderTitle from '../../../../../main/frontend/components/Header/Title/Title.jsx';
+import HeaderStaticMap from '../../../../../main/frontend/components/Header/StaticMap/StaticMap.jsx';
+import HeaderBreadcrumb from '../../../../../main/frontend/components/Header/Breadcrumb/Breadcrumb.jsx';
+import { Desktop, Tablet, Mobile } from '../../../../../main/frontend/components/Utils/MediaComponents/MediaComponents.jsx';
+
+import React from 'react';
+import chai, { expect } from 'chai';
+import { shallow } from 'enzyme';
+import chaiEnzyme from 'chai-enzyme';
+import sinon from 'sinon/pkg/sinon-no-sourcemaps';
+import HeaderBreadcrumb from '../../../../../../main/frontend/components/Header/Breadcrumb/Breadcrumb.jsx';
+import createMockMediaMatcher from '../../../legacy/common/MockMediaMatcher.jsx';
+import featureSwitchReaderFactory from '../../../../../../main/frontend/utils/featureSwitchReader.js';
+import {GEO_HIERARCHY_LEVELS} from '../../../../../../main/frontend/utils/globals.js';
+
+import fetchMock from 'fetch-mock';
+import chai, { expect } from 'chai';
+import * as sinon from 'sinon';
+import sinonChai from 'sinon-chai';
+import SSO from '../../../../main/frontend/sso/sso';
+
+import { expect } from 'chai';
+import { buildReducer, pathnameReducer } from '../../../main/frontend/reducer.js';
+
+import * as sinon from 'sinon';
+import {expect} from 'chai';
+import {mount} from 'enzyme';
+import React from 'react';
+import { Login } from '../../../../main/frontend/sso/Login';
+
+import {expect} from 'chai';
+import cloneDeep from 'lodash/cloneDeep';
+import initState from '../../../../../../stories/initialState/address/address.js';
+import featureSwitchReaderFactory from '../../../../../main/frontend/utils/featureSwitchReader';
+import { getDemandInput } from '../../../../../main/frontend/selectors/selectors.js';
+
+import {expect} from 'chai';
+import cloneDeep from 'lodash/cloneDeep';
+import initState from '../../../../../stories/initialState/address/address.js';
+import initStreet from '../../../../../stories/initialState/street/street.js';
+import Types from '../../../../main/frontend/Types.js';
+import {formatDE} from '../../../../main/frontend/utils/NumbersHelper.js';
+import {fullMapRoute} from '../../../../main/frontend/components/Navigation/Menu/menuConfig.js';
+import {PALM_MAX} from '../../../../main/frontend/utils/globals.js';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import {get} from 'lodash';
+
+import {stringify} from 'query-string';
+
+import { combineReducers } from 'redux';
+import addressSearchReducer from './components/AddressSearch/reducer';
+import googleAddressSearchReducer from './components/GoogleAddressSearch/reducer';
+import navigationReducer from './components/Navigation/reducer.js';
+import priceHistoryReducer from './components/Stuff/reducer.js';
+import priceCheckReducer from './components/PriceCheck/reducer.js';
+import myCityReducer from './components/NewVersion/reducer.js';
+import Types from './Types.js';
+
+import querystring from 'query-string';
+import uuid from 'uuid/v4';
+
+import React from 'react';
+import { Desktop, Tablet, Mobile } from '../common/MediaComponents.jsx';
+
+import thunkMiddleware from 'redux-thunk';
+import { createStore, applyMiddleware, compose } from 'redux';
+import { Provider } from 'react-redux';
+import { formatDefaultLocale } from 'd3';
+import {createCookieMiddleware} from 'redux-cookie';
+import Cookies from 'js-cookie';
+import App from './App.jsx';
+import rootReducer from './Reducer.jsx';
+import { initWorldConnector } from '../WorldConnector.jsx';
+
+import React from 'react';
+import { connect } from 'react-redux';
+import { throttle } from 'lodash';
+import InfoBoxes from './InfoBoxes';
+import SearchHeader from './SearchHeader';
+import HomeOwnerTeaser from './HomeOwnerTeaser';
+import actions from './Actions.jsx';
+import GeoElementsList from '../geoelements/GeoElementsList';
+import { TabletAndMobile } from '../common/MediaComponents.jsx';
+
+import { combineReducers } from 'redux';
+import { getSuggestionResultLength } from '../../utils/suggestionsUtils';
+
+import React from 'react';
+import { connect } from 'react-redux';
+import actions from './Actions.jsx';
+import tracking from '../../tracking/tracking.js';
+import { DesktopAndTablet, Mobile } from '../common/MediaComponents.jsx';
+import addressSearchConfig from '../../components/AddressSearch/config';
+import { generateLink } from '../../utils/suggestionsUtils';
+import featureSwitchReaderFactory from '../../utils/featureSwitchReader';
+import { FEATURE_NEW_SEARCH } from '../../utils/globals';
+
+import React from 'react';
+import { connect } from 'react-redux';
+import actions from './Actions.jsx';
+import tracking from '../../tracking/tracking.js';
+import common from '../common/common';
+import addressSearchConfig from '../../components/AddressSearch/config';
+import { getSuggestionResultLength, generateLink } from '../../utils/suggestionsUtils';
+
+import React from 'react';
+import AddressSearch from './AddressSearch.jsx';
+import AddressSearchResults from './AddressSearchResults.jsx';
+import HomeOwnerTeaser from './HomeOwnerTeaser.jsx';
+import bgImg from '../assets/images/landingpage-header.jpg';
+import bgVideoReduced from '../assets/images/landingpage-header-reduced.mp4';
+import bgVideo from '../assets/images/landingpage-header.mp4';
+
+import { connect } from 'react-redux';
+
+import React from 'react';
+
+import React from 'react';
+import Media from 'react-media';
+import PropTypes from 'prop-types';
+
+import {FEATURE_OMA_INTEGRATION} from './globals';
+
+import {getGeoData, getPageViewId} from '../selectors/selectors.js';
+import tracking from '../tracking/tracking.js';
+
+import filter from 'lodash/filter.js';
+import sortBy from './sortBy.js';
+
+import {setSearchParams} from './urlUtils';
+import Types from '../Types.js';
+
+import { formatLocale } from 'd3';
+
+import { getPageViewId } from '../selectors/selectors.js';
+import tracking from '../tracking/tracking.js';
+
+import {getCityType} from '../Types';
+import tracking from '../tracking/tracking.js';
+
+import types from '../../Types.js';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import WidgetFrame from '../../Utils/Widget/Frame/Frame.jsx';
+import WidgetTitle, { ALIGN } from '../../Utils/Widget/Title/Title.jsx';
+import Button from '../../Button/Button.jsx';
+import HistoryWidgetLabel from './Label/Label.jsx';
+import HistoryWidgetTable from './Table/Table.jsx';
+import BuildingsIcon from '../../../icons/BuildingsIcon.jsx';
+import tracking from '../../../tracking/tracking.js';
+import somethingTypeConfig from '../somethingTypeConfig.js';
+import { getSortedListToDate } from '../sorting.js';
+import {DASHBOARD_BUTTON_LISTINGS} from '../../../tracking/trackingNaming.js';
+import styles from '../History.less';
+import Illustration from '../../../assets/images/listing-widget_background.svg';
+import { DesktopAndTablet } from '../../Utils/MediaComponents/MediaComponents.jsx';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from '../../History.less';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import iconHelper from '../../List/Item/iconHelper.jsx';
+import styles from '../../List/Item/Item.less';
+import IconMap from '../../../../assets/images/icon-map-pin.svg';
+import {DesktopAndTablet, Mobile} from '../../../Utils/MediaComponents/MediaComponents';
+import tracking from '../../../../tracking/tracking.js';
+import { LISTINGS_WIDGET_ACTION_VIEW_EXPOSE } from '../../../../tracking/trackingNaming.js';
+import {appendSearchParamsToUrl} from '../../../../utils/urlUtils.js';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import HistoryWidgetHeader from './Header/Header.jsx';
+import HistoryWidgetRow from '../Row/Row.jsx';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import {Desktop, Tablet} from '../../../../Utils/MediaComponents/MediaComponents.jsx';
+import {listingWidgetDesktopHeaders, listingWidgetTabletHeaders} from '../../../List/headerConfig.js';
+import styles from '../../../History.less';
+
+import React from 'react';
+import Placeholder from '../../../Placeholder/Placeholder.jsx';
+import SquareBox from '../../../Placeholder/SquareBox.jsx';
+
+import sortBy from 'lodash/sortBy';
+import { NOT_SPECIFIED } from '../../utils/globals.js';
+import { clearDimensionFromStringNumber } from '../../utils/NumbersHelper.js';
+
+import types from '../../../Types.js';
+
+import { TAB } from '../../Navigation/Menu/menuConfig.js';
+import { MAP_PATH } from '../../../utils/globals.js';
+
+import React, {Suspense} from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
+import SectionTitle from '../../Section/Title/Title.jsx';
+import Section from '../../Section/Section.jsx';
+import HistoryList from '../List/List.jsx';
+import HistoryMobileList from '../Mobile/List/List.jsx';
+import { DesktopAndTablet, Mobile } from '../../Utils/MediaComponents/MediaComponents.jsx';
+import LocationSwitcher from '../../LocationSwitcher/LocationSwitcher.jsx';
+import CallToAction from '../../Section/CallToAction/CallToAction.jsx';
+import CallToActionLegacy from '../../Section/CallToAction/CallToActionLegacy.jsx';
+import detailedViewConfig from './config.js';
+import Types from '../../../Types.js';
+import { getHighestSqmPrice, getLowestSqmPrice } from '../sorting.js';
+import geoHappinessLevels from '../../../geoHappinessLevels.js';
+import priceCheckActions from '../../PriceCheck/actions.js';
+import priceCheckInputsConfig from '../../PriceCheckInput/inputsConfig.js';
+import { TAB } from '../../Navigation/Menu/menuConfig.js';
+import locationSwitcherConfig from './locationSwitcherConfig.js';
+import { INTERACTIVE_MAP_CTA, STATIC_MAP_CTA } from '../../../tracking/trackingNaming.js';
+import {getContainerHeight} from '../../DynamicMap/dynamicMapUtils.js';
+import styles from '../History.less';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import HistoryMobileSortBy from '../SortBy/SortBy.jsx';
+import HistoryMobileListItem from './Item/Item.jsx';
+import { sortWithSorterForKey, sortDate } from '../../sorting.js';
+
+import React from 'react';
+import iconHelper from '../../../List/Item/iconHelper.jsx';
+import AgentIcon from '../../../../../assets/images/agent_icon.svg';
+import ExposeIcon from '../../../../../assets/images/expose_icon.svg';
+import MapPinIcon from '../../../../../assets/images/map_icon.svg';
+import { listItemProps } from '../../../List/Item/propShape.js';
+import tracking from '../../../../../tracking/tracking.js';
+import {listingHistoryMobileHeaders as headerConfig} from '../../../List/headerConfig.js';
+import { CONTACT_REALTOR, SHOW_EXPOSE } from '../../../../../utils/globals.js';
+import styles from '../../Mobile.less';
+import {appendSearchParamsToUrl} from '../../../../../utils/urlUtils.js';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import Modal from '../../../Utils/Modal/Modal.jsx';
+import sortingOptions from './sortByConfig.js';
+import tracking from '../../../../tracking/tracking.js';
+import styles from '../Mobile.less';
+
+import React from 'react';
+import styles from './Item.less';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import tracking from '../../../../../tracking/tracking.js';
+import { CONTACT_REALTOR, SHOW_EXPOSE } from '../../../../../utils/globals.js';
+import styles from './Options.less';
+
+import React from 'react';
+import HistoryListItemOptions from './Options/Options.jsx';
+import MapPinIcon from '../../../../assets/images/map_icon.svg';
+import { listItemProps } from './propShape.js';
+import { NOT_SPECIFIED } from '../../../../utils/globals.js';
+import iconHelper from './iconHelper.jsx';
+import tracking from '../../../../tracking/tracking.js';
+import {LISTINGS_ACTION_VISIT_ADDRESS} from '../../../../tracking/trackingNaming.js';
+import styles from './Item.less';
+import { appendSearchParamsToUrl } from '../../../../utils/urlUtils.js';
+
+import styles from '../List.less';
+
+import {sortDate, sortDistance, sortStringNumber} from '../sorting';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from './Dropdown.less';
+
+import React from 'react';
+import AvailableIcon from './AvailableIcon.jsx';
+import InactiveIcon from './InactiveIcon.jsx';
+
+import React from 'react';
+import styles from './Item.less';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import HistoryListItem from './Item/Item.jsx';
+import listItemShape from './Item/propShape.js';
+import headerConfig from './headerConfig.js';
+import { sortWithSorterForKey } from '../sorting.js';
+import tracking from '../../../tracking/tracking.js';
+import styles from './List.less';
+
+import PropTypes from 'prop-types';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from '../Section.less';
+import subStyles from './Title.less';
+import featureSwitchReaderFactory from '../../../utils/featureSwitchReader';
+import { USE_CORE4 } from '../../../utils/globals';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Tablet, Desktop } from '../../Utils/MediaComponents/MediaComponents.jsx';
+import styles from '../Section.less';
+
+import React from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import SectionStaticMap from './StaticMap/StaticMap.jsx';
+import { DesktopAndTablet } from '../Utils/MediaComponents/MediaComponents.jsx';
+import { getStaticMaps, getScrollY, isBurgerMenuOpened } from '../../selectors/selectors.js';
+import styles from './Section.less';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Desktop, TabletAndMobile } from '../../Utils/MediaComponents/MediaComponents.jsx';
+import PriceCheckInput from '../../PriceCheckInput/PriceCheckInput.jsx';
+import InfoTag from '../../InfoTag/InfoTag.jsx';
+import {profileTypes} from '../../PriceCheckInput/stylingProfiles.js';
+import { getCommercializationType } from '../../../Types.js';
+import { TAB } from '../../Navigation/Menu/menuConfig.js';
+import styles from '../Section.less';
+
+import types from '../../Types.js';
+
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
+import PricePerMeter from '../Utils/PricePerMeter/PricePerMeter.jsx';
+import styles from './SomethingPreview.less';
+import {getCommercializationType} from '../../Types.js';
+import config from './config.js';
+import WidgetTitle from '../Utils/Widget/Title/Title.jsx';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Desktop, TabletAndMobile } from '../../Utils/MediaComponents/MediaComponents.jsx';
+import StickyContainer from '../../Utils/StickyContainer/StickyContainer.jsx';
+import PriceCheckInput from '../../PriceCheckInput/PriceCheckInput.jsx';
+import {profileTypes} from '../../PriceCheckInput/stylingProfiles.js';
+import { TAB } from '../../Navigation/Menu/menuConfig.js';
+import styles from '../Section.less';
+
+import React, {Component} from 'react';
+import Slider from 'react-slick';
+import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
+import SomethingPreview from './SomethingPreview.jsx';
+import Types from '../../Types.js';
+import {calculateDeltaInPercent} from '../../utils/NumbersHelper.js';
+import getToAndFromPrice from '../../utils/priceStatCalculator.js';
+import tracking from '../../tracking/tracking.js';
+import {REAL_ESTATE_PREVIEW_CLICK} from '../../tracking/trackingNaming.js';
+import actions from '../../actions.js';
+import RIGHT_ARROW from '../../assets/images/chevron_right.svg';
+import LEFT_ARROW from '../../assets/images/chevron_left.svg';
+
+import React from 'react';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import SectionTitle from '../../Section/Title/Title.jsx';
+import Section from '../../Section/Section.jsx';
+import Button from '../../Button/Button.jsx';
+import { getSomethingType } from '../../../selectors/selectors.js';
+import tracking from '../../../tracking/tracking.js';
+import config from './config.js';
+import TippsIcon from '../../../assets/images/house_plus_orange.svg';
+import ChecklistIcon from '../../../assets/images/checklist_orange.svg';
+import PriceDevelopmentIcon from '../../../assets/images/price_development_orange.svg';
+import styles from './styles.less';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from './Input.less';
+
+import types from '../../../Types.js';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import groupBy from 'lodash/groupBy';
+import meanBy from 'lodash/meanBy';
+import WidgetFrame from '../../Utils/Widget/Frame/Frame.jsx';
+import WidgetIcon from '../../Utils/Widget/Icon/Icon.jsx';
+import PriceDevelopmentIcon from '../../../assets/images/price_development_black.svg';
+import WidgetTitle, { ALIGN } from '../../Utils/Widget/Title/Title.jsx';
+import StuffWidgetRange from './Range/Range.jsx';
+import Button from '../../Button/Button.jsx';
+import StuffWidgetChart from './Chart/Chart.jsx';
+import { DesktopAndTablet, Mobile } from '../../Utils/MediaComponents/MediaComponents.jsx';
+import StuffMobileDetailedChart from '../Mobile/Detailed/Chart/Chart.jsx';
+import somethingTypeConfig from './somethingTypeConfig.js';
+import tracking from '../../../tracking/tracking.js';
+import {getCommercializationType} from '../../../Types.js';
+import { NO_DATA_TEXT } from '../../../utils/globals.js';
+import { svgWidgetMobileMargins, ticksConfigWidgetMobile } from './config.js';
+import {DASHBOARD_BUTTON_PRICE_DEV} from '../../../tracking/trackingNaming.js';
+import styles from '../Stuff.less';
+import getToAndFromPrice from '../../../utils/priceStatCalculator.js';
+
+import React from 'react';
+import Placeholder from '../../../Placeholder/Placeholder.jsx';
+import SquareBox from '../../../Placeholder/SquareBox.jsx';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import Chart from '../../../Chart/Chart.jsx';
+import formatLocale from '../../../../utils/formatLocale';
+import { svgWidgetDimensions, svgWidgetMargins } from '../config.js';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import PricePerMeter from '../../../Utils/PricePerMeter/PricePerMeter.jsx';
+import TrendIcon from '../../../../icons/Trend.jsx';
+import { calculateDeltaInPercent } from '../../../../utils/NumbersHelper.js';
+import styles from '../../../Utils/Widget/Widget.less';
+
+import types from '../../../Types.js';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import { max } from 'lodash';
+import formatLocale from '../../../../utils/formatLocale.js';
+import { toNumber } from '../utils.js';
+import Chart from '../../../Chart/Chart.jsx';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
+import {format} from 'd3';
+import SectionTitle from '../../Section/Title/Title.jsx';
+import Section from '../../Section/Section.jsx';
+import CallToActionLegacy from '../../Section/CallToAction/CallToActionLegacy.jsx';
+import Legend from '../../Chart/Legend/Legend.jsx';
+import StuffDetailedChart from './Chart/Chart.jsx';
+import StatsBoxContainer from '../StatsBox/Container/Container.jsx';
+import StatsBoxMobile from '../StatsBox/Mobile/Mobile.jsx';
+import Modal from '../../Utils/Modal/Modal.jsx';
+import {DesktopAndTablet, Mobile} from '../../Utils/MediaComponents/MediaComponents.jsx';
+import StuffMobileDetailedChart from '../Mobile/Detailed/Chart/Chart.jsx';
+import Control from '../Mobile/Detailed/Control/Control.jsx';
+import actions from '../actions.js';
+import priceCheckActions from '../../PriceCheck/actions.js';
+import {formatDE} from '../../../utils/NumbersHelper.js';
+import detailedViewConfig from './config.js';
+import sortBy from '../../../utils/sortBy.js';
+import {getCommercializationType} from '../../../Types.js';
+import {getStatsBoxData, toNumber} from './utils.js';
+import {PRIMARY_BLUE, PRIMARY_GREEN} from '../../../utils/colorPalette.js';
+import { NO_DATA_TEXT } from '../../../utils/globals.js';
+import priceCheckInputsConfig from '../../PriceCheckInput/inputsConfig.js';
+import { TAB } from '../../Navigation/Menu/menuConfig.js';
+import tracking from '../../../tracking/tracking.js';
+import styles from '../Stuff.less';
+import {PRICEDEV_INFO_ICON} from '../../../tracking/trackingNaming';
+
+import filter from 'lodash/filter';
+import {PRIMARY_BLUE, PRIMARY_GREEN} from '../../../utils/colorPalette.js';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import groupBy from 'lodash/groupBy';
+import meanBy from 'lodash/meanBy';
+import Chart from '../../../../Chart/Chart.jsx';
+import { svgDimensions, svgMargins, ticksConfigWidgetDesktop} from '../config.js';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import RightArrow from '../../../../../assets/images/circle_arrow_right.svg';
+import LeftArrow from '../../../../../assets/images/circle_arrow_left.svg';
+import styles from '../../../Stuff.less';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import StatsBox from '../StatsBox.jsx';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import StatsBoxItemMobile from './Item/Item.jsx';
+import {getCommercializationType} from '../../../../Types.js';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import PricePerMeter from '../../../../Utils/PricePerMeter/PricePerMeter.jsx';
+import TrendIcon from '../../../../../icons/Trend.jsx';
+import {formatDE} from '../../../../../utils/NumbersHelper.js';
+import styles from './Item.less';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import PricePerMeter from '../../../Utils/PricePerMeter/PricePerMeter.jsx';
+import TrendIcon from '../../../../icons/Trend.jsx';
+import {formatDE} from '../../../../utils/NumbersHelper.js';
+import styles from '../StatsBox.less';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
+import StatsItem from './Item/Item.jsx';
+import {getCommercializationType} from '../../../Types.js';
+import Close from '../../../icons/Close';
+import {TAB, navigateTo} from '../../Navigation/Menu/menuConfig.js';
+import tracking from '../../../tracking/tracking.js';
+import {getIBWLink, rentPriceCheckLink} from '../../../utils/priceCalcLinkHelper.js';
+import {PRICEDEV_RLE_OVERLAY_BTN, TRACK_STUFF_CLICK_V2} from '../../../tracking/trackingNaming.js';
+import styles from './StatsBox.less';
+
+import geoHappinessLevels from '../../geoHappinessLevels.js';
+
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
+import config from './config.js';
+import WidgetFrame from '../Utils/Widget/Frame/Frame.jsx';
+import { appendSearchParamsToUrl } from '../../utils/urlUtils.js';
+import WidgetTitle, {ALIGN} from '../Utils/Widget/Title/Title.jsx';
+import styles from './SubHappinessInfoWidget.less';
+import tracking from '../../tracking/tracking.js';
+import {EXPAND_SEO_LINKS, EXPLORE_SEO_LINKS} from '../../tracking/trackingNaming.js';
+import {Desktop, Mobile, Tablet} from '../Utils/MediaComponents/MediaComponents.jsx';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from '../styles.less';
+
+import React from 'react';
+import Axis from '../Axis/Axis.jsx';
+import { translation } from '../axisConfig.js';
+
+import React, { Component } from 'react';
+
+import React from 'react';
+import { line } from 'd3';
+import styles from '../styles.less';
+
+import React, { Component } from 'react';
+import { select as d3Select } from 'd3-selection';
+import PropTypes from 'prop-types';
+import styles from '../styles.less';
+import axes from '../axisConfig.js';
+
+import * as d3Axis from 'd3-axis';
+
+import { scaleLinear } from 'd3-scale';
+
+import React, { Component } from 'react';
+import { select as d3Select } from 'd3-selection';
+import PropTypes from 'prop-types';
+import styles from '../../styles.less';
+import axes from '../../axisConfig.js';
+
+import React from 'react';
+import GridLines from './Lines/Lines.jsx';
+import { translation } from '../axisConfig.js';
+
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import Axes from './Axes/Axes.jsx';
+import Grid from './Grid/Grid.jsx';
+import Line from './Line/Line.jsx';
+import Circles from './Circles/Circles.jsx';
+import ResponsiveWrapper from '../Utils/ResponsiveWrapper/ResponsiveWrapper.jsx';
+import { DesktopAndTablet } from '../Utils/MediaComponents/MediaComponents.jsx';
+import { createScale } from './utils.js';
+import config from './heightConfig.js';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from './InfoTag.less';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import Header from '../Header/Header.jsx';
+import NavigationMenu from '../Menu/Menu.jsx';
+import BurgerMenu from '../BurgerMenu/BurgerMenu.jsx';
+import AddressSearch from '../../AddressSearch/AddressSearch.jsx';
+import GoogleAddressSearch from '../../GoogleAddressSearch/AddressSearch.jsx';
+import ToggleButton from '../Toggle/Button/Button.jsx';
+import { Desktop, Mobile, Tablet } from '../../Utils/MediaComponents/MediaComponents.jsx';
+import styles from '../Navigation.less';
+import FeatureToggle from '../../Utils/FeatureToggle/FeatureToggle';
+import {FEATURE_GOOGLE_ADDRESS_SEARCH} from '../../../utils/globals';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import {withRouter} from 'react-router-dom';
+import Modal from '../../Utils/Modal/Modal.jsx';
+import Header from '../Header/Header.jsx';
+import NavigationMenu from '../Menu/Menu.jsx';
+import AddressSearch from '../../AddressSearch/AddressSearch.jsx';
+import styles from '../Navigation.less';
+import actions from '../actions.js';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from '../Navigation.less';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import NavigationIcon from '../Icon/Icon.jsx';
+import styles from '../Navigation.less';
+import Tab from '../Menu/TabConfig.js';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import NavigationIcon from '../../Icon/Icon.jsx';
+import ArrowRight from '../../../../icons/ChevronCircleRight.jsx';
+import ArrowLeft from '../../../../icons/ChevronCircleLeft.jsx';
+import styles from '../../Navigation.less';
+import actions from '../../actions.js';
+import { isSidebarExpanded } from '../../../../selectors/selectors.js';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
+import NavigationTab from '../Tab/Tab.jsx';
+import { getSomethingType, getGeoData, getPageViewId} from '../../../selectors/selectors.js';
+import tracking from '../../../tracking/tracking.js';
+import navigationActions from '../actions.js';
+import { getCommercializationType, BUY } from '../../../Types.js';
+import styles from '../Navigation.less';
+import parseGeoInfo from '../../../utils/trackingGeoData';
+import NavigationIcon from '../Icon/Icon';
+import HomeIcon from '../../../icons/Home';
+import featureSwitchReaderFactory from '../../../utils/featureSwitchReader';
+import {FEATURE_PUBLIC_ENTRY_POINT} from '../../../utils/globals';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from '../Navigation.less';
+
+import PriceMap from '../../../icons/PriceMap.jsx';
+import HomeIcon from '../../../icons/Home.jsx';
+import BuildingsIcon from '../../../icons/BuildingsIcon.jsx';
+import PriceDevelopmentIcon from '../../../icons/PriceDevelopment.jsx';
+import PriceCheckIcon from '../../../icons/PriceCheckIcon.jsx';
+import MagnifyingGlassHouse from '../../../icons/MagnifyingGlassHouse.jsx';
+import TabConfig from './TabConfig.js';
+import {MAP_PATH} from '../../../utils/globals';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
+import { withRouter } from 'react-router-dom';
+import NavigationTitle from '../Title/Title.jsx';
+import Dropdown from '../../Dropdown/Dropdown.jsx';
+import actions from '../../../actions.js';
+import tracking from '../../../tracking/tracking.js';
+import { commercializationTypes, propertyTypes } from './selectConfig.js';
+import { getCityType, getCommercializationType } from '../../../Types.js';
+import { getSomethingType, isNavigationHeaderFolded } from '../../../selectors/selectors.js';
+import styles from '../Navigation.less';
+
+import types from '../../Types.js';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import {withRouter} from 'react-router-dom';
+import Button from '../Button/Button.jsx';
+import Input from '../Input/Input.jsx';
+import Icon from './Icon/Icon.jsx';
+import HouseIcon from '../../assets/images/house_icon.svg';
+import somethingTypeConfig from '../PriceCheck/Widget/somethingTypeConfig.js';
+import {getProfile, profileTypes} from './stylingProfiles.js';
+import tracking from '../../tracking/tracking.js';
+import {navigateTo, TAB} from '../Navigation/Menu/menuConfig.js';
+import styles from './PriceCheckInput.less';
+import {getCommercializationType, RENT} from '../../Types.js';
+import {rentPriceCheckLink} from '../../utils/priceCalcLinkHelper.js';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from '../PriceCheckInput.less';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import {formatDE} from '../../../utils/NumbersHelper.js';
+import styles from './PricePerMeter.less';
+
+import React from 'react';
+import { withRouter } from 'react-router';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from '../Widget.less';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from '../Widget.less';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from '../Widget.less';
+
+import React from 'react';
+import styles from './ErrorBoundry.less';
+
+import React from 'react';
+import Button from '../../../Button/Button.jsx';
+
+import React from 'react';
+import { withRouter } from 'react-router';
+
+import React, { Component } from 'react';
+import { throttle } from 'lodash';
+
+import React from 'react';
+import Media from 'react-media';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import featureSwitchReaderFactory from '../../../utils/featureSwitchReader.js';
+
+import React from 'react';
+import throttle from 'lodash/throttle';
+import styles from './StickyContainer.less';
+
+import React, { Component } from 'react';
+
+import React from 'react';
+import ReactModal from 'react-modal';
+import PropTypes from 'prop-types';
+import ModalWrapper from './Wrapper/Wrapper.jsx';
+import CloseIcon from '../../../icons/Close.jsx';
+import styles from './Modal.less';
+
+import MapFeature from '@com/com365-cxp-map/src/features/MapFeature.jsx';
+import RichMarkerFactory from '@com/com365-cxp-map/src/external/RichMarkerFactory.js';
+
+import RichMarkerFactory from '@com/com365-cxp-map/src/external/RichMarkerFactory.js';
+import styles from './style.less';
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import RichMarkerFactory from '@com/com365-cxp-map/src/external/RichMarkerFactory.js';
+import styles from './style.less';
+
+import MapFeature from '@com/com365-cxp-map/src/features/MapFeature.jsx';
+import _ from 'lodash';
+import utils, { SHAPE_STYLE } from './dynamicMapUtils.js';
+import featureSwitchReaderFactory from '../../utils/featureSwitchReader';
+import { FEATURE_OSM_SHAPES } from '../../utils/globals';
+
+import {PALM_MAX} from '../../utils/globals.js';
+import errorLogger from './errorLogger';
+import {generateQueryStr} from '../../utils/urlUtils.js';
+
+import React from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import MapContainer from '@com/com365-cxp-map/src/MapContainer.jsx';
+import CenterMapToBounds from '@com/com365-cxp-map/src/preprocessors/CenterMapToBounds.js';
+import StyledMarkerFeature from '@com/com365-cxp-map/src/features/styledMarker/StyledMarkerFeature.jsx';
+import InfoBubbleFeature from '@com/com365-cxp-map/src/features/infoBubble/InfoBubbleFeature.jsx';
+import AddressMarkerFeature from './AddressMarkerFeature.jsx';
+import DynamicMapMarkerOverlay from './Marker/Overlay/Overlay.jsx';
+import DynamicMapMarkerAddress from './Marker/Address/Address.jsx';
+import Types, { getCommercializationType, getShortName } from '../../Types.js';
+import GoliathPriceMapFeature from './GoliathPriceMapFeature.jsx';
+import PriceMapLegend from './PriceMapLegend/PriceMapLegend.jsx';
+import createMapModel, { updateHandler } from './createMapModel.js';
+import tracking from '../../tracking/tracking.js';
+import BuildingShapesFeature from './BuildingShapesFeature.jsx';
+import HeatmapFeature from './HeatmapFeature.jsx';
+import utils from './dynamicMapUtils.js';
+
+import PriceMapFeature from '@com/com365-cxp-map/src/features/pricemap/PriceMapFeature.jsx';
+
+import PropTypes from 'prop-types';
+
+import MarkerEventTypes from '@com/com365-cxp-map/src/features/styledMarker/MarkerEventTypes.js';
+import markerLabel from './markerLabel.jsx';
+import markerDot from './markerDot.jsx';
+import { getShortName } from '../../Types.js';
+import {CALL_TO_ACTION_HEIGHT, getContainerHeight} from './dynamicMapUtils.js';
+import styles from './mapStyle.json';
+import { MAX_HEIGHT } from '../../utils/globals.js';
+
+import PropTypes from 'prop-types';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import Close from '../../../../icons/Close.jsx';
+import { COMMERCIALIZATION_TYPES, BUY } from '../../../../Types.js';
+import utils from '../utils.js';
+import styles from './styles.less';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import CloseIcon from '../../../../icons/Close.jsx';
+import ArrowLeft from '../../../../icons/ArrowLeft.jsx';
+import ArrowRight from '../../../../icons/ArrowRight.jsx';
+import DynamicMapMarkerOverlayItemShape from './ItemShape.js';
+import {CONTACT_REALTOR, SHOW_EXPOSE} from '../../../../utils/globals.js';
+import utils from '../utils.js';
+import tracking from '../../../../tracking/tracking.js';
+import styles from './styles.less';
+
+import React from 'react';
+import ColorWithLabel from './ColorWithLabel.jsx';
+
+import React from 'react';
+import ColorWithLabel from './ColorWithLabel.jsx';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from './style.less';
+import Modal from '../../Utils/Modal/Modal.jsx';
+import legendTexts from './legendTexts.jsx';
+import ColorLegend from './ColorLegend.jsx';
+import MarkerLegend from './MarkerLegend.jsx';
+import Types, {APARTMENT, getCityType} from '../../../Types.js';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import { DesktopAndTablet, Mobile } from '../../Utils/MediaComponents/MediaComponents.jsx';
+import { PriceMapLegendDesktop } from './PriceMapLegendDesktop.jsx';
+import PriceMapLegendMobile from './PriceMapLegendMobile.jsx';
+
+import React from 'react';
+import {getCommercializationType, RENT} from '../../../Types.js';
+
+import React from 'react';
+import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
+import styles from './style.less';
+import {getSomethingType} from '../../../selectors/selectors.js';
+import Types, {APARTMENT, getCityType} from '../../../Types.js';
+import Modal from '../../Utils/Modal/Modal.jsx';
+import MarkerLegend from './MarkerLegend.jsx';
+import ColorLegend from './ColorLegend.jsx';
+import legendTexts from './legendTexts.jsx';
+
+import MapFeature from '@com/com365-cxp-map/src/features/MapFeature.jsx';
+import $ from 'jquery';
+import GoliathPriceMapFeature from './GoliathPriceMapFeature.jsx';
+import BuildingShapesFeature from './BuildingShapesFeature.jsx';
+import { getShortName } from '../../Types.js';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from './style.less';
+
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
+import WidgetFrame from '../Utils/Widget/Frame/Frame.jsx';
+import styles from './StaticMapWidget.less';
+import Button from '../Button/Button.jsx';
+import tracking from '../../tracking/tracking.js';
+import { DASHBOARD_MAP_WIDGET } from '../../tracking/trackingNaming.js';
+
+import React from 'react';
+import Login from '../../sso/Login';
+import NewVersionMain from './NewVersionMain';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
+import { get } from 'lodash';
+import { getPriceTrendAPIUrl } from '../../selectors/myproperty/selectors.js';
+import {getHofURL, getRleURL} from './urls.js';
+import defaultTracking from '../../tracking/tracking.js';
+import {getPriceRange} from './BlindGuess/priceValuationAPI.js';
+import demandAPI from './WhalePanel/WhalePanelAPI';
+import actions from '../PriceCheck/actions';
+import {Desktop, Mobile, Tablet} from '../Utils/MediaComponents/MediaComponents';
+import NewVersionDesktop from './NewVersionDesktop/NewVersionDesktop';
+import NewVersionTablet from './NewVersionTablet/NewVersionTablet';
+import NewVersionMobile from './NewVersionMobile/NewVersionMobile';
+import featureSwitchReaderFactory from '../../utils/featureSwitchReader';
+import {FEATURE_OMA_INTEGRATION, FEATURE_MP_OVERLAY} from '../../utils/globals';
+import {somethingApi} from '../../apis/somethingApi';
+import { get as getPriceTrend } from '../../apis/priceTrendApi';
+import { dataFromOmaReceived, createUpdatePriceTrend } from './actions';
+import {normalizeSomethingType} from '../../Types';
+
+import React from 'react';
+import {connect} from 'react-redux';
+import {max, isEmpty} from 'lodash';
+import Financing from '../../../icons/Financing';
+import QuarterlyDeltaIndicators from '../QuarterlyDeltaIndicators/QuarterlyDeltaIndicators';
+import {getStatsBoxData, toNumber} from '../../Stuff/Detailed/utils';
+import {PRIMARY_BLUE, PRIMARY_GREEN} from '../../../utils/colorPalette';
+import {getCommercializationType, normalizeSomethingType} from '../../../Types';
+import Legend from '../../Chart/Legend/Legend';
+import LoadingStatus from '../../LoadingStatus/LoadingStatus.jsx';
+import StuffDetailedChart from '../../Stuff/Detailed/Chart/Chart';
+import {FEATURE_OMA_INTEGRATION} from '../../../utils/globals';
+import featureSwitchReaderFactory from '../../../utils/featureSwitchReader';
+
+import { REAL_ESTATE_FROM_OMA_RECEIVED, UPDATE_PRICE_TREND } from './actions.js';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import { formatLocale as formatLocaleD3 } from 'd3';
+import {connect} from 'react-redux';
+import demandAPI from './WhalePanelAPI';
+import Profile from '../../../icons/Profile';
+import {getDemandInput} from '../../../selectors/selectors';
+import { Desktop, Mobile, Tablet } from '../../Utils/MediaComponents/MediaComponents.jsx';
+
+import React from 'react';
+import {withRouter} from 'react-router';
+import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
+import PriceSearch from '../../../icons/PriceSearch';
+import {navigateTo, TAB} from '../../Navigation/Menu/menuConfig';
+import tracking from '../../../tracking/tracking';
+import * as trackingNaming from '../../../tracking/trackingNaming';
+import {getGeoData, getPageViewId, getSomethingFromOma } from '../../../selectors/selectors';
+import parseGeoInfo from '../../../utils/trackingGeoData';
+import { Desktop, Mobile, Tablet } from '../../Utils/MediaComponents/MediaComponents.jsx';
+import actions from '../../PriceCheck/actions';
+import featureSwitchReaderFactory from '../../../utils/featureSwitchReader';
+import {FEATURE_OMA_INTEGRATION} from '../../../utils/globals';
+
+import React from 'react';
+import image from './illu_house-outside.png';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
+import HouseLogo from './HouseLogo';
+import titleExtractor from '../../../utils/titleExtractor';
+import titleExtractorOma from '../../../utils/titleExtractorOma';
+import { Desktop, Mobile, Tablet } from '../../Utils/MediaComponents/MediaComponents.jsx';
+
+import React from 'react';
+import Modal from 'react-modal';
+import PropTypes from 'prop-types';
+import CityInfo from '../CityInfo/CityInfo';
+import BlindGuess from '../BlindGuess/BlindGuessContainer';
+import PotentialSalePrice from '../PotentialSalePrice/PotentialSalePrice';
+import WhalePanel from '../WhalePanel/WhalePanel';
+import HomeLinks from '../HomeLinks/HomeLinks';
+import ErrorBoundary from '../../Utils/ErrorBoundary/ErrorBoundary.jsx';
+import PriceTrendChart from '../PriceTrendChart/PriceTrendChart';
+import SomethingForm from '../SomethingForm/SomethingForm';
+import BlurredBackground from './BlurredBackground.jsx';
+
+import React from 'react';
+import AlertIcon from './AlertIcon';
+
+import React from 'react';
+import styles from './styles.less';
+
+import React from 'react';
+import styles from './styles.less';
+
+import { isEmpty, values } from 'lodash';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
+import {get, isEmpty, memoize} from 'lodash';
+import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
+import styles from './styles.less';
+import RoomNumber from './RoomNumber';
+import DropDown from './DropDown';
+import {post} from '../../../apis/somethingApi';
+import ErrorMessage from './ErrorMessage';
+import {gApi} from '../../../apis/gApi';
+import {areAllFieldsValid, runValidations} from './validations.js';
+import {getAddress, getHappinessLevel, getCityType} from '../../../selectors/selectors';
+import tracking from '../../../tracking/tracking';
+
+import React from 'react';
+import {map} from 'lodash';
+import {connect} from 'react-redux';
+import {STUFF_HUB_LINK} from '../../../../tracking/trackingNaming';
+import TrackableLink from '../../TrackableLink/TrackableLink';
+import homeSellerHubURLs from '../HomeUrls';
+import {getGeoData, getPageViewId} from '../../../../selectors/selectors';
+import parseGeoInfo from '../../../../utils/trackingGeoData';
+
+import React from 'react';
+import {connect} from 'react-redux';
+import {map} from 'lodash';
+import {STUFF_HUB_LINK} from '../../../../tracking/trackingNaming';
+import TrackableLink from '../../TrackableLink/TrackableLink';
+import { homeSellerHubURLs } from '../HomeUrls';
+import {getGeoData, getPageViewId} from '../../../../selectors/selectors';
+import parseGeoInfo from '../../../../utils/trackingGeoData';
+
+import {stringify} from 'query-string';
+import trackingParameters from '../trackingParameters';
+
+import React from 'react';
+import { Desktop, Mobile, Tablet } from '../../Utils/MediaComponents/MediaComponents.jsx';
+import HomeLinksDesktop from './HomeLinksDesktop/HomeLinksDesktop';
+import HomeLinksMobile from './HomeLinksMobile/HomeLinksMobile';
+import HomeLinksTablets from './HomeLinksTablet/HomeLinksTablets';
+
+import React from 'react';
+import {map} from 'lodash';
+import {connect} from 'react-redux';
+import {STUFF_HUB_LINK} from '../../../../tracking/trackingNaming';
+import TrackableLink from '../../TrackableLink/TrackableLink';
+import { homeSellerHubURLs } from '../HomeUrls';
+import {getGeoData, getPageViewId} from '../../../../selectors/selectors';
+import parseGeoInfo from '../../../../utils/trackingGeoData';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import BlindGuess from './BlindGuess.jsx';
+import tracking from '../../../tracking/tracking.js';
+
+import React from 'react';
+import { formatLocale as formatLocaleD3 } from 'd3';
+import { isFinite } from 'lodash';
+import {PRIMARY_BLUE} from '../../../utils/colorPalette.js';
+import EuroHouse from '../../../icons/EuroHouse';
+import { Desktop, Mobile, Tablet } from '../../Utils/MediaComponents/MediaComponents.jsx';
+import EuroHouseTablet from '../../../icons/EuroHouseTablet';
+
+import React from 'react';
+import Modal from 'react-modal';
+import PropTypes from 'prop-types';
+import CityInfo from '../CityInfo/CityInfo';
+import BlindGuess from '../BlindGuess/BlindGuessContainer';
+import PotentialSalePrice from '../PotentialSalePrice/PotentialSalePrice';
+import WhalePanel from '../WhalePanel/WhalePanel';
+import HomeLinks from '../HomeLinks/HomeLinks';
+import ErrorBoundary from '../../Utils/ErrorBoundary/ErrorBoundary.jsx';
+import PriceTrendChart from '../PriceTrendChart/PriceTrendChart';
+import SomethingForm from '../SomethingForm/SomethingForm';
+
+import React from 'react';
+import styles from './QuartelyDeltaIndicators.less';
+import PriceDelta from './PriceDelta/PriceDelta';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from './PriceDelta.less';
+import {formatDE} from '../../../../utils/NumbersHelper';
+import TrendIcon from '../../../../icons/Trend.jsx';
+
+import React from 'react';
+import { isFunction } from 'lodash';
+
+import React from 'react';
+import Modal from 'react-modal';
+import PropTypes from 'prop-types';
+import CityInfo from '../CityInfo/CityInfo';
+import BlindGuess from '../BlindGuess/BlindGuessContainer';
+import PotentialSalePrice from '../PotentialSalePrice/PotentialSalePrice';
+import WhalePanel from '../WhalePanel/WhalePanel';
+import HomeLinks from '../HomeLinks/HomeLinks';
+import ErrorBoundary from '../../Utils/ErrorBoundary/ErrorBoundary.jsx';
+import PriceTrendChart from '../PriceTrendChart/PriceTrendChart';
+import SomethingForm from '../SomethingForm/SomethingForm';
+import BlurredBackground from './BlurredBackground.jsx';
+
+import React from 'react';
+import {connect} from 'react-redux';
+import {withRouter} from 'react-router';
+import styles from '../../styles.less';
+import geoHappinessLevels from '../../geoHappinessLevels';
+import LoadingStatus from '../LoadingStatus/LoadingStatus.jsx';
+import DemographicInfoWidget from '../DemographicInfo/Widget/Widget.jsx';
+import DemographicInfoWidgetPlaceholder from '../DemographicInfo/Placeholder/Placeholder.jsx';
+import StuffWidget from '../Stuff/Widget/Widget.jsx';
+import PriceCheckWidget from '../PriceCheck/Widget/Widget.jsx';
+import HistoryWidget from '../History/Widget/Widget.jsx';
+import PriceCheckWidgetPlaceholder from '../PriceCheck/Widget/Placeholder/Placeholder.jsx';
+import HistoryWidgetPlaceholder from '../History/Widget/Placeholder/Placeholder.jsx';
+import StuffWidgetPlaceholder from '../Stuff/Widget/Placeholder/Placeholder.jsx';
+import ErrorBoundary from '../Utils/ErrorBoundary/ErrorBoundary.jsx';
+import Header from '../Header/Header.jsx';
+import GoliathTouchpointWrapper from '../GoliathTouchpointWrapper/GoliathTouchpointWrapper.jsx';
+import titleExtractor from '../../utils/titleExtractor';
+import StaticMapWidget from '../StaticMapWidget/StaticMapWidget.jsx';
+import SubHappinessInfoWidget from '../SubHappinessInfoWidget/SubHappinessInfoWidget.jsx';
+import SomethingPreviewWidget from '../SomethingPreviewWidget/SomethingPreviewWidget.jsx';
+import Types, {BUY, getCommercializationType} from '../../Types';
+import NewVersionTeaser from '../NewVersionTeaser/NewVersionTeaser';
+import HeaderBreadcrumb from '../Header/Breadcrumb/Breadcrumb';
+import HeaderTitle from '../Header/Title/Title';
+
+import React from 'react';
+import {connect} from 'react-redux';
+import styles from './styles.less';
+import Section from '../Section/Section';
+import SectionTitle from '../Section/Title/Title';
+
+import React from 'react';
+import Modal from 'react-modal';
+import {SomethingForm} from '../NewVersion/SomethingForm/SomethingForm';
+import styles from '../NewVersion/SomethingForm/styles.less';
+import {Desktop, Mobile, Tablet} from '../Utils/MediaComponents/MediaComponents';
+import BlurredGoliathBackgroundDesktop from './BlurredGoliathBackgroundDesktop';
+import BlurredGoliathBackgroundTablet from './BlurredGoliathBackgroundTablet';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from './Button.less';
+import tracking from '../../tracking/tracking.js';
+import featureSwitchReaderFactory from '../../utils/featureSwitchReader';
+import { USE_CORE4 } from '../../utils/globals';
+
+import React, {Suspense} from 'react';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
+import { throttle } from 'lodash';
+import LoadingStatus from '../LoadingStatus/LoadingStatus.jsx';
+import NavigationSidebar from '../Navigation/Sidebar/Sidebar.jsx';
+import ErrorBoundary from '../Utils/ErrorBoundary/ErrorBoundary.jsx';
+import Dashboard from '../Dashboard/Dashboard.jsx';
+import StaticHeader from '../StaticHeader/HeaderClassUpdater.jsx';
+import titleExtractor from '../../utils/titleExtractor.js';
+import actions from '../../actions.js';
+import navigationActions from '../Navigation/actions.js';
+import { TAB, getActiveTab } from '../Navigation/Menu/menuConfig.js';
+import config from './config.js';
+import styles from '../../styles.less';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import Close from '../../../icons/Close.jsx';
+import AddressSearchIcon from '../../../assets/images/address_search_icon.svg';
+import tracking from '../../../tracking/tracking.js';
+import {SEARCH_CLICK_ON_SEARCH_FIELD, SEARCH_ENTER_ADDRESS} from '../../../tracking/trackingNaming.js';
+import styles from '../AddressSearch.less';
+
+import React from 'react';
+import {connect} from 'react-redux';
+import styles from './AddressSearch.less';
+import actions from './actions';
+import tracking from '../../tracking/tracking.js';
+import {setSearchParams} from '../../utils/urlUtils.js';
+import {SEARCH_SELECT_ADDRESS} from '../../tracking/trackingNaming.js';
+import AddressSearchInput from './Input/Input.jsx';
+import {initAutoComplete, removeAutoComplete} from './googleAddressSearchUtils';
+import AddressSearchResults from './Results/Results.jsx';
+
+import React from 'react';
+import image from './powered_by_google_on_white.png';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from '../../AddressSearch.less';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from '../AddressSearch.less';
+import AddressSearchResultItem from './Item/Item.jsx';
+import Logo from './Logo/Logo.jsx';
+
+import React from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { getHeaderVisibility, getIsMapOn } from '../../selectors/selectors.js';
+import { Mobile } from '../Utils/MediaComponents/MediaComponents.jsx';
+import styles from './styles.less';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from './styles.less';
+
+import React from 'react';
+import styles from './TitleWithText.less';
+
+import React from 'react';
+import WidgetFrame from '../Utils/Widget/Frame/Frame.jsx';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from './common.less';
+
+import types from '../../../Types.js';
+import inputsConfig from '../../PriceCheckInput/inputsConfig.js';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
+import WidgetFrame from '../../Utils/Widget/Frame/Frame.jsx';
+import WidgetTitle, { ALIGN } from '../../Utils/Widget/Title/Title.jsx';
+import CertificateIcon from '../../../assets/images/certificate_icon.svg';
+import PriceCheckInput from '../../PriceCheckInput/PriceCheckInput.jsx';
+import {DesktopAndTablet, Mobile} from '../../Utils/MediaComponents/MediaComponents.jsx';
+import Types from '../../../Types.js';
+import { SUBTITLE_CONTENT, TITLE } from './content.js';
+import {profileTypes} from '../../PriceCheckInput/stylingProfiles.js';
+import somethingTypeConfig from './somethingTypeConfig.js';
+import { getSomethingType, getPriceCheckInputs} from '../../../selectors/selectors.js';
+import actions from '../actions.js';
+import priceCheckInputsConfig from '../../PriceCheckInput/inputsConfig.js';
+import PriceCheckIllustration from '../../../assets/images/illustration-foopreis.svg';
+import PriceCheckIllustrationMobile from '../../../assets/images/illustration-foopreis-mobile.svg';
+import styles from './Widget.less';
+
+import { SELECT_REAL_ESTATE_TYPE } from '../../actions.js';
+
+import React from 'react';
+import Placeholder from '../../../Placeholder/Placeholder.jsx';
+import SquareBox from '../../../Placeholder/SquareBox.jsx';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import Button from '../../Button/Button.jsx';
+import style from '../PriceCheck.less';
+import {infoBoxImageAndTextConfig} from './config.js';
+import featureSwitchReaderFactory from '../../../utils/featureSwitchReader';
+import { USE_CORE4 } from '../../../utils/globals';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import Section from '../../Section/Section.jsx';
+import SectionTitle from '../../Section/Title/Title.jsx';
+import RleWidget from '../../RleWidget/RleWidget.jsx';
+import InfoBox from './InfoBox.jsx';
+import contentConfig, {universalDescription} from './config.js';
+import actions from '../actions.js';
+import { getCityType } from '../../../Types.js';
+import styles from '../PriceCheck.less';
+
+import types from '../../../Types.js';
+import CHECKLIST_ILLUSTRATION from '../../../assets/images/checklist.svg';
+import IBW_MAIL_ILLUSTRATION from '../../../assets/images/ibw-per-mail.svg';
+import VALUATION_ILLUSTRATION from '../../../assets/images/foowert-ermitteln.svg';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import WidgetFrame from '../../Utils/Widget/Frame/Frame.jsx';
+import WidgetTitle, { ALIGN } from '../../Utils/Widget/Title/Title.jsx';
+import DemographicInfo from '../../../assets/images/demographic_info.svg';
+import { getLocationName, getDemographicInfo } from '../../../selectors/selectors.js';
+import tileConfig from '../tileConfig.js';
+import DESKTOP_ILLUSTRATION from '../../../assets/images/demographic_widget_desktop_illustration.svg';
+import TABLET_ILLUSTRATION from '../../../assets/images/demographic_widget_tablet_illustration.svg';
+import MOBILE_ILLUSTRATION from '../../../assets/images/demographic_widget_mobile_illustration.svg';
+import styles from './Widget.less';
+import {Desktop, Mobile, Tablet} from '../../Utils/MediaComponents/MediaComponents';
+
+import React from 'react';
+import Placeholder from '../../Placeholder/Placeholder.jsx';
+import SquareBox from '../../Placeholder/SquareBox.jsx';
+
+import PropTypes from 'prop-types';
+import React from 'react';
+import { HashRouter as Router, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import ScrollToTop from '../Utils/ScrollToTop/ScrollToTop.jsx';
+import ResizeOnUpdate from '../Utils/ResizeOnUpdate/ResizeOnUpdate.jsx';
+import {HASH_UPDATED} from '../../actions';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import tracking from '../../tracking/tracking.js';
+import styles from './styles.less';
+
+import {generateQueryStr} from '../../utils/urlUtils.js';
+
+import { getSuggestionResultLength } from '../../utils/suggestionsUtils';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import Close from '../../../icons/Close.jsx';
+import AddressSearchIcon from '../../../assets/images/address_search_icon.svg';
+import tracking from '../../../tracking/tracking.js';
+import {SEARCH_CLICK_ON_SEARCH_FIELD, SEARCH_ENTER_ADDRESS} from '../../../tracking/trackingNaming.js';
+import styles from '../AddressSearch.less';
+
+import React from 'react';
+import {connect} from 'react-redux';
+import AddressSearchInput from './Input/Input';
+import styles from './AddressSearch.less';
+import AddressSearchResults from './Results/Results';
+import actions from './actions';
+import tracking from '../../tracking/tracking.js';
+import {setSearchParams} from '../../utils/urlUtils.js';
+import {SEARCH_SELECT_ADDRESS} from '../../tracking/trackingNaming.js';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from '../../AddressSearch.less';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from '../AddressSearch.less';
+import AddressSearchResultItem from './Item/Item';
+import addressSearchConfig from '../config';
+import { getSuggestionResultLength } from '../../../utils/suggestionsUtils';
+
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
+import styles from './NewVersionTeaser.less';
+import Close from '../../icons/Close.jsx';
+import tracking from '../../tracking/tracking.js';
+import {CLAIM_PROPERTY} from '../../tracking/trackingNaming.js';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
+import HeaderStaticMap from './StaticMap/StaticMap.jsx';
+import { Tablet, Desktop, Mobile } from '../Utils/MediaComponents/MediaComponents.jsx';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from '../Header.less';
+import {DesktopAndTablet} from '../../Utils/MediaComponents/MediaComponents';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from '../Header.less';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import {DesktopAndTablet, Mobile} from '../../Utils/MediaComponents/MediaComponents.jsx';
+import tracking from '../../../tracking/tracking.js';
+import {appendSearchParamsToUrl} from '../../../utils/urlUtils.js';
+import styles from '../Header.less';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { GoliathTouchpoint } from '@com/com365-bar-agent-touchpoint';
+import _ from 'lodash';
+import WidgetFrame from '../Utils/Widget/Frame/Frame.jsx';
+import tracking from '../../tracking/tracking.js';
+import IdIcon from '../../assets/images/id.svg';
+import { getLocationName, getSomethingType, getGeoId } from '../../selectors/selectors.js';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import { get } from 'lodash';
+import { connect } from 'react-redux';
+import authUrl from '../auth/authUrl';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {applyMiddleware, compose, createStore} from 'redux';
+import thunkMiddleware from 'redux-thunk';
+import {formatDefaultLocale} from 'd3';
+import AppProvider from './components/AppProvider/AppProvider.jsx';
+import {initWorldConnector, propertyBookLoaded} from './worldConnector.js';
+import rootReducer from './reducer.js';
+import {DEFAULT_MARKETING_FOCUS} from './Types.js';
+import {getMarketingFocusUpdater} from './utils/marketingFocusUpdater.js';
+import AmazingPage from './components/AmazingPage/AmazingPage.jsx';
+import HomePage from './components/HomePage/HomePage.jsx';
+import {getReportPageViewWithGeoData} from './utils/pageViewWithGeoDataReporter.js';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import OverlayPage from './components/OverlayPage/OverlayPage';
+
+import { createSelector } from 'reselect';
+import { PALM_MAX, NO_PRICE_RANGE, FEATURE_OMA_INTEGRATION} from '../utils/globals.js';
+import { calculateDeltaInPercent, formatDE } from '../utils/NumbersHelper.js';
+import { fullMapRoute, getActiveTab, getActiveView} from '../components/Navigation/Menu/menuConfig.js';
+import geoHappinessLevels from '../geoHappinessLevels.js';
+import titleExtractor from '../utils/titleExtractor';
+import featureSwitchReaderFactory from '../utils/featureSwitchReader';
+
+import { get } from 'lodash';
+import { getPricesByHappinessLevel } from '../selectors.js';
