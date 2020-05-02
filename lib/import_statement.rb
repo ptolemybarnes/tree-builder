@@ -1,3 +1,4 @@
+
 class ImportStatement
   attr_reader :location, :location_reference, :name
 
@@ -8,6 +9,8 @@ class ImportStatement
     @location = location
     @location_reference = location_reference
     @name = _
+  rescue Exception => e
+    raise ImportStatementParseException.new("Error parsing: #{line} of file: '#{location_reference}'", e)
   end
 
   def parse line
@@ -25,4 +28,6 @@ class ImportStatement
   def to_s
     "#<ImportStatement:#{object_id} @location='#{location}', @name='#{name}', @reference='#{location_reference}', file_import?=#{file_import?}>"
   end
+
+  class ImportStatementParseException < RuntimeError; end
 end

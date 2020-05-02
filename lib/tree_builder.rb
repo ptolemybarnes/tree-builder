@@ -1,4 +1,5 @@
 require 'set'
+require 'pathname'
 require_relative './import_statement'
 
 class TreeResult < Struct.new(:tree)
@@ -12,7 +13,7 @@ end
 
 PARSABLE_FILE_TYPES = Set['.jsx', '.js']
 
-class ImportStatementParseException < RuntimeError; end
+DEBUG = $DEBUG ? $stderr : File.open(File::NULL, "w")
 
 class TreeBuilder < Struct.new(:entrypoint)
   def self.call entrypoint
@@ -25,7 +26,7 @@ class TreeBuilder < Struct.new(:entrypoint)
       children: _call
     })
   rescue Exception => e
-    STDERR.puts "Traversed file: #{entrypoint}"
+    DEBUG.puts "Traversed file: #{entrypoint}"
     raise e
   end
 
@@ -35,16 +36,14 @@ class TreeBuilder < Struct.new(:entrypoint)
     read_file(entrypoint)
       .map.with_index do |line, idx|
         line_number = idx + 1
-        STDERR.puts "processing #{entrypoint}:#{line_number}"
+        DEBUG.puts "processing #{entrypoint}:#{line_number}"
         ImportStatement.new(line, "#{entrypoint}:#{line_number}")
-      rescue Exception => error
-        raise ImportStatementParseException.new("Error parsing: #{line} of file: #{entrypoint}:#{line_number}", error)
       end
       .select(&:file_import?)
       .map do |path|
-        PARSABLE_FILE_TYPES.map {|filetype| add_file_extension(to_absolute_path(path.location).gsub(Dir.pwd, ''), filetype) }
+        # should somehow avoid losing ImportStatement at this point, as it contains useful information.
+        PARSABLE_FILE_TYPES.map {|filetype| add_file_extension(to_absolute_path(path.location), filetype) }
       end
-      .map {|paths| paths.map {|path| '.' + path }}
       .map {|paths| to_real_path paths }
       .map {|path| TreeBuilder.call(path) }
   end

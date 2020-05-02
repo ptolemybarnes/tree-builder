@@ -2,34 +2,38 @@ require './lib/tree_builder'
 
 describe TreeBuilder do
   it 'builds a tree' do
-    entry = './fixtures/app.jsx'
+    entry = 'fixtures/app.jsx'
     result = TreeBuilder.call(entry)
 
     expect(result.to_h).to eq({
       node: entry,
       children: [
         {
-          node: "./fixtures/foo.js",
+          node: abs("/fixtures/foo.js"),
           children: [],
         },
         {
-          node: "./fixtures/bar.js",
+          node: abs("/fixtures/bar.js"),
           children: [],
         },
         {
-          node: "./fixtures/baz/baz.js",
+          node: abs("/fixtures/baz/baz.js"),
           children: [
             {
               children: [],
-              node: "./fixtures/ku.js"
+              node: abs("/fixtures/ku.js")
             }
           ]
         },
         {
-          node: "./fixtures/image.png",
+          node: abs("/fixtures/image.png"),
           children: []
         }
       ]
     });
+  end
+
+  def abs path
+    "#{Dir.pwd}#{path}"
   end
 end
