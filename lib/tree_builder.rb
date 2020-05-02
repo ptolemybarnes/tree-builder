@@ -12,6 +12,8 @@ end
 
 PARSABLE_FILE_TYPES = Set['.jsx', '.js']
 
+class ImportStatementParseException < RuntimeError; end
+
 class TreeBuilder < Struct.new(:entrypoint)
   def self.call entrypoint
     new(entrypoint).call
@@ -23,7 +25,7 @@ class TreeBuilder < Struct.new(:entrypoint)
       children: _call
     })
   rescue Exception => e
-    puts "Traversed file: #{entrypoint}"
+    STDERR.puts "Traversed file: #{entrypoint}"
     raise e
   end
 
@@ -31,14 +33,20 @@ class TreeBuilder < Struct.new(:entrypoint)
 
   def _call
     read_file(entrypoint)
-      .map {|line| ImportStatement.new(line) }
-      .select(&:file_import?)
-      .map(&:location)
-      .map do |path|
-        PARSABLE_FILE_TYPES.map {|filetype| add_file_extension(to_absolute_path(path).gsub(Dir.pwd, ''), filetype) }
+      .map.with_index do |line, idx|
+        line_number = idx + 1
+        STDERR.puts "processing #{entrypoint}:#{line_number}"
+        ImportStatement.new(line, "#{entrypoint}:#{line_number}")
+      rescue Exception => error
+        raise ImportStatementParseException.new("Error parsing: #{line} of file: #{entrypoint}:#{line_number}", error)
       end
+      .select(&:file_import?)
+      .map do |path|
+        PARSABLE_FILE_TYPES.map {|filetype| add_file_extension(to_absolute_path(path.location).gsub(Dir.pwd, ''), filetype) }
+      end
+      .map {|paths| paths.map {|path| '.' + path }}
       .map {|paths| to_real_path paths }
-      .map {|path| TreeBuilder.call('.' + path) }
+      .map {|path| TreeBuilder.call(path) }
   end
 
   def read_file path
@@ -56,6 +64,8 @@ class TreeBuilder < Struct.new(:entrypoint)
   end
 
   def to_real_path paths
-    paths.find {|path| File.exists?(File.expand_path(Dir.pwd + path)) }
+    real_path = paths.find {|path| File.exists?(path) }
+    return real_path if real_path
+    raise RuntimeError.new("Unable to reduce to a real path: #{paths.join(', ')} when parsing #{entrypoint}")
   end
 end
