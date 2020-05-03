@@ -63,7 +63,7 @@ class TreeBuilder < Struct.new(:entrypoint)
   end
 
   def to_real_path paths
-    real_path = paths.find {|path| File.exists?(path) }
+    real_path = paths.find {|path| File.exist?(path) }
     return real_path if real_path
     raise RuntimeError.new("Unable to reduce to a real path: #{paths.join(', ')} when parsing #{entrypoint}")
   end
