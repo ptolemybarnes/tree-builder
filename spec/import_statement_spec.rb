@@ -42,6 +42,15 @@ describe ImportStatement do
     expect(ImportStatement.new(multiline_import_end).location).to eq '../../foo/bar.js'
   end
 
+  it 'parses image imports in .less files' do
+    expect(ImportStatement.new("     content: url('./images/foo-bar.svg');").location).to eq './images/foo-bar.svg'
+    expect(ImportStatement.new("   content: url(\"./image.png\");").location).to eq './image.png'
+  end
+
+  it 'parses less imports in .less files' do
+    expect(ImportStatement.new('@import "./other-style.less";').location).to eq './other-style.less'
+  end
+
   it "does not get confused by strings with 'from' in" do
     input = "throw new Error(`The attribute was missing from the foo-bar: ${path.join('.')}`);"
 

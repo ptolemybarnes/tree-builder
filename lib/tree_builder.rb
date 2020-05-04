@@ -11,7 +11,7 @@ class TreeResult < Struct.new(:tree)
   end
 end
 
-PARSABLE_FILE_TYPES = Set['.jsx', '.js']
+PARSABLE_FILE_TYPES = Set['.jsx', '.js', '.less']
 
 DEBUG = $DEBUG ? $stderr : File.open(File::NULL, "w")
 

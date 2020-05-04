@@ -10,12 +10,12 @@ class ImportStatement
     @location_reference = location_reference
     @name = _
   rescue Exception => e
-    raise ImportStatementParseException.new("Error parsing: #{line} of file: '#{location_reference}'", e)
+    raise ImportStatementParseException.new("Error parsing #{line} of file: '#{location_reference}': #{e.message}")
   end
 
   def parse line
-    line.chomp.match(/((} from)|(^import)|(React.lazy)).*'(.*)'/) do |match|
-      [nil, match[5].gsub(/[\'|;]/, '')]
+    line.chomp.match(/((} from)|(^@?import)|(url\()|(React.lazy)).*['"](.*)['"]/) do |match|
+      [nil, match[6].gsub(/[\'|;]/, '')]
     end
   end
 

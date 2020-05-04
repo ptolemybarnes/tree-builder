@@ -28,6 +28,19 @@ describe TreeBuilder do
         {
           node: abs("/fixtures/image.png"),
           children: []
+        },
+        {
+          node: abs("/fixtures/style.less"),
+          children: [
+            {
+              node: abs("/fixtures/other-style.less"),
+              children: []
+            },
+            {
+              node: abs("/fixtures/image.png"),
+              children: []
+            }
+          ]
         }
       ]
     });
