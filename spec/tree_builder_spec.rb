@@ -6,43 +6,18 @@ describe TreeBuilder do
     result = TreeBuilder.call(entry)
 
     expect(result.to_h).to eq({
-      node: entry,
-      children: [
-        {
-          node: abs("/fixtures/foo.js"),
-          children: [],
+      entry => {
+        abs("/fixtures/foo.js") => {},
+        abs("/fixtures/bar.js") => {},
+        abs("/fixtures/baz/baz.js") => {
+          abs("/fixtures/ku.js") => {}
         },
-        {
-          node: abs("/fixtures/bar.js"),
-          children: [],
-        },
-        {
-          node: abs("/fixtures/baz/baz.js"),
-          children: [
-            {
-              children: [],
-              node: abs("/fixtures/ku.js")
-            }
-          ]
-        },
-        {
-          node: abs("/fixtures/image.png"),
-          children: []
-        },
-        {
-          node: abs("/fixtures/style.less"),
-          children: [
-            {
-              node: abs("/fixtures/other-style.less"),
-              children: []
-            },
-            {
-              node: abs("/fixtures/image.png"),
-              children: []
-            }
-          ]
+        abs("/fixtures/image.png") => {},
+        abs("/fixtures/style.less") => {
+          abs("/fixtures/other-style.less") => {},
+          abs("/fixtures/image.png") => {}
         }
-      ]
+      }
     });
   end
 

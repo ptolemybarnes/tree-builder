@@ -2,15 +2,6 @@ require 'set'
 require 'pathname'
 require_relative './import_statement'
 
-class TreeResult < Struct.new(:tree)
-  def to_h
-    {
-      node: tree.fetch(:node),
-      children: tree.fetch(:children).map(&:to_h)
-    }
-  end
-end
-
 PARSABLE_FILE_TYPES = Set['.jsx', '.js', '.less']
 
 DEBUG = $DEBUG ? $stderr : File.open(File::NULL, "w")
@@ -21,10 +12,7 @@ class TreeBuilder < Struct.new(:entrypoint)
   end
 
   def call
-    TreeResult.new({
-      node: entrypoint,
-      children: _call
-    })
+    { entrypoint => _call }
   rescue Exception => e
     DEBUG.puts "Traversed file: #{entrypoint}"
     raise e
@@ -45,7 +33,7 @@ class TreeBuilder < Struct.new(:entrypoint)
         PARSABLE_FILE_TYPES.map {|filetype| add_file_extension(to_absolute_path(path.location), filetype) }
       end
       .map {|paths| to_real_path paths }
-      .map {|path| TreeBuilder.call(path) }
+      .reduce({}) {|s, path| s.merge(TreeBuilder.call(path)) }
   end
 
   def read_file path
