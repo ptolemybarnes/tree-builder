@@ -29,7 +29,6 @@ class TreeBuilder < Struct.new(:entrypoint)
       end
       .select(&:file_import?)
       .map do |path|
-        # should somehow avoid losing ImportStatement at this point, as it contains useful information.
         PARSABLE_FILE_TYPES.map {|filetype| add_file_extension(to_absolute_path(path.location), filetype) }
       end
       .map {|paths| to_real_path paths }
