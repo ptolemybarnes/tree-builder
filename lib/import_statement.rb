@@ -1,21 +1,20 @@
 
 class ImportStatement
-  attr_reader :location, :location_reference, :name
+  attr_reader :location, :location_reference
 
-  NULL_IMPORT_STATEMENT = [nil, '']
+  NULL_IMPORT_STATEMENT = ''
 
   def initialize line, location_reference = ''
-    _, location = (parse(line) || NULL_IMPORT_STATEMENT)
+    location = (parse(line) || NULL_IMPORT_STATEMENT)
     @location = location
     @location_reference = location_reference
-    @name = _
   rescue Exception => e
     raise ImportStatementParseException.new("Error parsing #{line} of file: '#{location_reference}': #{e.message}")
   end
 
   def parse line
     line.chomp.match(/((} from)|(^@?import)|(url\()|(React.lazy)).*['"](.*)['"]/) do |match|
-      [nil, match[6].gsub(/[\'|;]/, '')]
+      match[6].gsub(/[\'|;]/, '')
     end
   end
 
@@ -26,7 +25,7 @@ class ImportStatement
   end
 
   def to_s
-    "#<ImportStatement:#{object_id} @location='#{location}', @name='#{name}', @reference='#{location_reference}', file_import?=#{file_import?}>"
+    "#<ImportStatement:#{object_id} @location='#{location}', @reference='#{location_reference}', file_import?=#{file_import?}>"
   end
 
   class ImportStatementParseException < RuntimeError; end
